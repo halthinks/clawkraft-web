@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClawKraft Status</title>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:0 auto;padding:48px 24px;background:#081014;color:#eef7f8}.ok{color:#86efac}.bad{color:#fca5a5}.card{border:1px solid #29414a;border-radius:14px;padding:20px;background:#0d171c}</style></head>
+<body><h1>ClawKraft Status</h1><div class="card"><h2 id="state">Checking…</h2><p id="detail">Public status exposes coarse service availability only.</p></div>
+<script>
+fetch('/api/status',{cache:'no-store'}).then(r=>r.json().then(j=>({ok:r.ok,j}))).then(({ok,j})=>{
+ const s=document.getElementById('state'); const d=document.getElementById('detail');
+ s.textContent=ok?'Operational':'Degraded'; s.className=ok?'ok':'bad';
+ d.textContent=ok?'ClawKraft MCP is reachable.':'ClawKraft MCP health check did not pass.';
+}).catch(()=>{const s=document.getElementById('state');s.textContent='Degraded';s.className='bad';});
+</script></body></html>
