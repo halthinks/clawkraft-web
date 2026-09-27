@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="ClawKraft turns the compute and AI tools you already have into a persistent, governed execution workforce.">
 <title>ClawKraft — Persistent, Governed Execution</title>
+<link rel="preload" as="image" href="/assets/clawkraft-header.webp?v=6027c6780636f508" type="image/webp" fetchpriority="high">
 <style>
 :root{
   color-scheme:dark;
@@ -28,6 +29,8 @@ nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:11px;border:1px solid var(--line);font-weight:800}
 .button.primary{background:var(--text);color:#071014;border-color:var(--text)}
 .button.secondary{background:var(--panel);color:var(--text)}
+.brand-header{width:100%;background:#02070a;border-bottom:1px solid rgba(34,56,64,.75);line-height:0;overflow:hidden}
+.brand-header img{display:block;width:100%;height:auto;margin:0 auto;object-fit:contain}
 .hero{padding:92px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:900}
 h1{font-size:clamp(46px,7vw,86px);line-height:.96;letter-spacing:-.055em;margin:14px 0 22px;max-width:930px}
@@ -80,6 +83,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
     </div>
   </div>
 </nav>
+
+<div class="brand-header" aria-label="ClawKraft">
+  <img src="/assets/clawkraft-header.webp?v=6027c6780636f508" width="1536" height="512" alt="ClawKraft — Engineered to grip. Built to last. Turnkey, governed, provider-agnostic.">
+</div>
 
 <main>
   <div class="wrap hero">
