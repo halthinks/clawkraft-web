@@ -35,3 +35,8 @@ The public site may consume only intentionally public interfaces/contracts from 
 External agents attach independently through:
 
 `https://mcp.clawkraft.dev/mcp`
+
+
+## Local CI
+
+The public site is qualified by the repository-local `.clawkraft/ci.json` manifest before its default-branch SHA is admitted as canonical ClawKraft source.
