@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ClawKraft turns the compute and AI tools you already have into a persistent, governed execution workforce.">
+<title>ClawKraft — Persistent, Governed Execution</title>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#071014;--bg2:#0b171c;--panel:#0f1d23;--panel2:#13242b;
+  --text:#eef7f8;--muted:#9fb2ba;--line:#223840;--accent:#7dd3fc;
+  --accent2:#b6f09c;--danger:#fda4af;--max:1180px;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+radial-gradient(circle at 85% 10%,rgba(125,211,252,.08),transparent 26rem),
+linear-gradient(180deg,#061014 0%,#081217 55%,#050b0e 100%);color:var(--text)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
+nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);background:rgba(7,16,20,.88);backdrop-filter:blur(16px)}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.14em;font-size:14px}
+.nav-links{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px}
+.nav-links a:hover{color:var(--text)}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:11px;border:1px solid var(--line);font-weight:800}
+.button.primary{background:var(--text);color:#071014;border-color:var(--text)}
+.button.secondary{background:var(--panel);color:var(--text)}
+.hero{padding:92px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:900}
+h1{font-size:clamp(46px,7vw,86px);line-height:.96;letter-spacing:-.055em;margin:14px 0 22px;max-width:930px}
+.lede{font-size:clamp(18px,2.4vw,24px);line-height:1.55;color:#c7d7dc;max-width:780px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{margin-top:26px;color:var(--muted);font-size:14px}
+.terminal{background:linear-gradient(180deg,#0c171c,#091216);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.terminal-head{display:flex;gap:7px;padding:13px 15px;border-bottom:1px solid var(--line)}
+.dot{width:9px;height:9px;border-radius:50%;background:#39535c}
+.terminal-body{padding:22px;font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:#cfe7ed}
+.dim{color:#718991}.ok{color:var(--accent2)}.warn{color:#fde68a}
+section{padding:72px 0;border-top:1px solid rgba(34,56,64,.55)}
+.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:end;margin-bottom:32px}
+h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.035em;line-height:1.05;margin:8px 0}
+.section-copy{color:var(--muted);font-size:17px;line-height:1.65}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:linear-gradient(180deg,var(--panel),#0c171c);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:var(--muted);line-height:1.6}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.step{border:1px solid var(--line);border-radius:14px;padding:18px;background:rgba(15,29,35,.72)}
+.step b{display:block;margin-bottom:7px}.step span{color:var(--muted);font-size:14px;line-height:1.5}
+.kicker{color:var(--accent2);font-size:13px;font-weight:800}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.list{display:grid;gap:10px;margin-top:16px}
+.item{display:flex;gap:12px;align-items:flex-start;color:#c7d7dc}
+.item:before{content:"";width:8px;height:8px;margin-top:8px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+.band{background:linear-gradient(135deg,rgba(125,211,252,.09),rgba(182,240,156,.055));border:1px solid var(--line);border-radius:18px;padding:28px}
+.arch{font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;color:#cfe7ed}
+.cta{padding:72px 0 96px}
+.cta-box{padding:42px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,#102129,#0a1418)}
+.cta-box h2{max-width:760px}
+footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}}
+@media(max-width:620px){.nav-links a:not(.button){display:none}.hero{padding-top:54px}.grid,.flow{grid-template-columns:1fr}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">CLAWKRAFT</a>
+    <div class="nav-links">
+      <a href="#product">Product</a>
+      <a href="#mission-control">Mission Control</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a class="button secondary" href="https://app.clawkraft.dev/">Open App</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Persistent execution fabric</div>
+      <h1>Turn the compute and AI tools you already have into a persistent execution workforce.</h1>
+      <p class="lede">Bring a VPS, workstation, cloud host, or existing execution environment. Connect the agents and providers you already use. ClawKraft coordinates work, preserves progress across worker changes, and governs how work is reviewed, accepted, merged, and deployed.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://setup.clawkraft.dev/">Get Started</a>
+        <a class="button secondary" href="https://app.clawkraft.dev/">Open Mission Control</a>
+        <a class="button secondary" href="/docs/">Connect an Agent</a>
+      </div>
+      <div class="proof">Persistent workers · isolated execution · durable handoffs · governed delivery</div>
+    </div>
+    <div class="terminal" aria-label="Example ClawKraft execution flow">
+      <div class="terminal-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="terminal-body">
+        <div><span class="dim">$</span> clawkraft commission host</div>
+        <div class="ok">✓ host qualified</div>
+        <div><span class="dim">$</span> clawkraft connect workforce</div>
+        <div class="ok">✓ workers registered</div>
+        <div><span class="dim">$</span> clawkraft run program</div>
+        <div>research → implementation → evidence</div>
+        <div>review → merge → deploy → verify</div>
+        <div class="warn">worker-1 disconnected</div>
+        <div class="ok">✓ checkpoint preserved</div>
+        <div class="ok">✓ worker-2 resumed</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="product">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">What it does</div><h2>Real project work, not loose prompts.</h2></div>
+        <p class="section-copy">ClawKraft is an execution fabric that coordinates workers, infrastructure, source changes, proof, review, and delivery. It is designed so useful work can survive sessions, providers, process failures, and handoffs.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Persistent workers</h3><p>Coordinate interactive agents, long-running goal workers, coding agents, browser agents, native workers, and external connected workers.</p></article>
+        <article class="card"><h3>Isolated execution</h3><p>Use worktrees, disposable CI, containers, databases, caches, persistent storage, warm environments, resource limits, and host-qualified isolation.</p></article>
+        <article class="card"><h3>Durable handoffs</h3><p>Assignments, checkpoints, receipts, leases, evidence, and review state remain durable so the next worker can continue instead of restarting from chat history.</p></article>
+        <article class="card"><h3>Governed review</h3><p>Carry changes through diff inspection, corrective work, tests, evidence, approval, and handoff before accepted state advances.</p></article>
+        <article class="card"><h3>Governed deployment</h3><p>Bind deployment to authorization, evidence, rollback behavior, production verification, and durable receipts.</p></article>
+        <article class="card"><h3>Private workloads</h3><p>Ship generic platform capabilities while keeping project-specific Programs, repositories, policies, credentials, and execution context private.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Bring your own infrastructure</div><h2>Bring a normal machine. Commission an execution host.</h2></div>
+        <p class="section-copy">A customer should not have to manually wire every runner, credential, lifecycle path, browser, and CI environment over SSH. ClawKraft turns supported infrastructure into a qualified host that can participate in the workforce.</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>1. Infrastructure</b><span>VPS, workstation, or cloud host you control.</span></div>
+        <div class="step"><b>2. Setup</b><span>Commission and qualify execution capabilities.</span></div>
+        <div class="step"><b>3. Workforce</b><span>Attach compatible workers and providers.</span></div>
+        <div class="step"><b>4. Programs</b><span>Execute dependency-aware work with durable state.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission-control">
+    <div class="wrap split">
+      <div class="band">
+        <div class="eyebrow">Mission Control</div>
+        <h2>See the program. Control the workforce.</h2>
+        <p class="section-copy">Mission Control exposes the state that matters without turning the browser into a second control plane.</p>
+        <div class="list">
+          <div class="item">Program selection, progress, next transition, cost, resources, decisions, and blocking findings</div>
+          <div class="item">Guide me, Run within plan, and Full R2E autonomy envelopes</div>
+          <div class="item">Pause, Resume, Stop, worker ON/OFF, Enable All, Disable All, and Hard Stop</div>
+          <div class="item">Work graph, decision inbox, authority envelope, and audit timeline</div>
+        </div>
+        <div class="hero-actions"><a class="button primary" href="https://app.clawkraft.dev/">Open Mission Control</a></div>
+      </div>
+      <div class="card">
+        <div class="kicker">Durable execution</div>
+        <h3 style="font-size:28px;margin-top:8px">Progress should survive worker failure.</h3>
+        <div class="arch">Worker A starts
+   ↓
+checkpoint
+   ↓
+Worker A disappears
+   ↓
+Worker B resumes
+   ↓
+evidence → review → completion</div>
+        <p style="margin-top:18px;color:var(--muted);line-height:1.65">The durable model preserves assignment state, worker identity, leases, generations, checkpoints, receipts, evidence, review state, handoff state, and recovery history.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Programs</div><h2>Turn objectives into governed execution.</h2></div>
+        <p class="section-copy">Programs preserve why work exists, what it depends on, what counts as complete, what evidence is required, and what downstream work becomes available next.</p>
+      </div>
+      <div class="band arch">research / objective
+        ↓
+dependency-aware work
+        ↓
+workers
+        ↓
+evidence
+        ↓
+review
+        ↓
+accepted result</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="card">
+        <div class="eyebrow">Disposable execution</div>
+        <h2>Parallel work should not fight over one shared CI box.</h2>
+        <p class="section-copy">Execution environments can be commissioned, assigned, checkpointed, handed off, returned, refreshed, replaced, or discarded. Proof remains bound to the work that produced it.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Failure and recovery</div>
+        <h2>Failure should become state, not mystery.</h2>
+        <p class="section-copy">ClawKraft is designed to reconcile worker death, stale leases, provider loss, CI failure, branch divergence, review invalidation, merge races, deployment failure, rollback, and stale or superseded work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Governed delivery</div><h2>Execution is only part of the job.</h2></div>
+        <p class="section-copy">ClawKraft carries work through a delivery path that separates producing a change from proving, reviewing, accepting, merging, and deploying it.</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>Execute</b><span>Worker performs the bounded work.</span></div>
+        <div class="step"><b>Inspect + correct</b><span>Review the diff and resolve findings.</span></div>
+        <div class="step"><b>Test + evidence</b><span>Produce current qualification and proof.</span></div>
+        <div class="step"><b>Approve + deliver</b><span>Merge, deploy, verify, and preserve receipts.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Architecture</div><h2>Clear surfaces. One authority.</h2></div>
+        <p class="section-copy">The public website explains the product. Authenticated applications operate it. The private ClawKraft control plane remains authoritative for execution state and privileged actions.</p>
+      </div>
+      <div class="band arch">clawkraft.com
+      ↓
+setup.clawkraft.dev
+      ↓
+app.clawkraft.dev  ←→  review.clawkraft.dev
+      ↓
+ClawKraft control plane
+      ↓
+execution hosts + workers
+
+External agents: https://mcp.clawkraft.dev/mcp</div>
+    </div>
+  </section>
+
+  <div class="wrap cta">
+    <div class="cta-box">
+      <div class="eyebrow">Get started</div>
+      <h2>Turn the infrastructure you already have into a workforce that can keep going.</h2>
+      <div class="hero-actions">
+        <a class="button primary" href="https://setup.clawkraft.dev/">Commission an execution host</a>
+        <a class="button secondary" href="/docs/">Connect an existing agent</a>
+        <a class="button secondary" href="https://app.clawkraft.dev/">Open Mission Control</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© ClawKraft</div>
+    <div class="footer-links">
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a href="/docs/privacy/">Privacy</a>
+      <a href="/docs/terms/">Terms</a>
+      <a href="/docs/support/">Support</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
