@@ -41,6 +41,10 @@ nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);
 .waitlist-card h2{margin:0 0 8px;font-size:28px;letter-spacing:-.025em}
 .waitlist-card p{margin:0 0 20px;color:var(--muted);line-height:1.55}
 .waitlist-card label{display:block;margin:14px 0 6px;font-size:13px;color:#bfd0d5}
+.waitlist-privacy{margin:16px 0 0;color:#9fb2ba;font-size:12.5px;line-height:1.55}
+.waitlist-privacy a{color:#7dd3fc;text-decoration:underline}
+.waitlist-consent{display:flex!important;gap:10px;align-items:flex-start;margin:14px 0 0!important;color:#c7d7dc!important;font-size:12.5px!important;line-height:1.5}
+.waitlist-consent input{width:auto!important;margin-top:3px;flex:0 0 auto}
 .waitlist-card input{box-sizing:border-box;width:100%;padding:13px 14px;border-radius:10px;border:1px solid #2b444d;background:#03090c;color:var(--text);font:inherit;outline:none}
 .waitlist-card input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(125,211,252,.12)}
 .waitlist-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
@@ -315,6 +319,8 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
         <label for="waitlistWebsite">Website</label>
         <input id="waitlistWebsite" name="website" tabindex="-1" autocomplete="off">
       </div>
+      <p class="waitlist-privacy">We use your name and email only to manage early access, contact you about availability, and operate and secure ClawKraft. We do not sell your personal information or share it for advertising. <a href="/docs/privacy/" target="_blank" rel="noopener">Read the Privacy Policy</a>.</p>
+      <label class="waitlist-consent" for="waitlistPrivacyAck"><input id="waitlistPrivacyAck" name="privacy_ack" type="checkbox" required><span>I agree that ClawKraft may store my name and email and contact me about early access as described above.</span></label>
       <div class="waitlist-actions">
         <button class="waitlist-cancel" id="waitlistCancel" type="button">Cancel</button>
         <button class="waitlist-submit" id="waitlistSubmit" type="submit">Join Waitlist</button>
@@ -332,6 +338,7 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
   const email = document.getElementById('waitlistEmail');
   const name = document.getElementById('waitlistName');
   const website = document.getElementById('waitlistWebsite');
+  const privacyAck = document.getElementById('waitlistPrivacyAck');
   const status = document.getElementById('waitlistStatus');
   const submit = document.getElementById('waitlistSubmit');
 
@@ -361,6 +368,7 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
       status.textContent = 'Enter a valid email address.'; email.focus(); return;
     }
     if (cleanName.length > 80) { status.textContent = 'Name must be 80 characters or fewer.'; name.focus(); return; }
+    if (!privacyAck.checked) { status.textContent = 'Please confirm the privacy statement to join the waitlist.'; privacyAck.focus(); return; }
 
     submit.disabled = true;
     status.textContent = 'Joining…';
@@ -368,12 +376,12 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
       const r = await fetch(ENDPOINT, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({name: cleanName, email: cleanEmail, website: website.value.trim()})
+        body: JSON.stringify({name: cleanName, email: cleanEmail, website: website.value.trim(), privacy_ack: privacyAck.checked})
       });
       let data = {};
       try { data = await r.json(); } catch {}
       if (r.status === 201 || (r.ok && data.ok)) {
-        status.textContent = 'You’re on the ClawKraft waitlist. Thank you.';
+        status.textContent = 'Thanks for signing up. You’re on the ClawKraft early access waitlist. As soon as access becomes available, we’ll email you with more instructions.';
         form.reset();
         return;
       }
