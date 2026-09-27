@@ -31,6 +31,26 @@ nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);
 .button.secondary{background:var(--panel);color:var(--text)}
 .brand-header{width:100%;background:#02070a;border-bottom:1px solid rgba(34,56,64,.75);line-height:0;overflow:hidden}
 .brand-header img{display:block;width:100%;height:auto;margin:0 auto;object-fit:contain}
+
+.early-access-bar{display:flex;justify-content:center;align-items:center;padding:26px 16px 8px;background:#02070a}
+.early-access-button{appearance:none;border:1px solid rgba(182,240,156,.58);background:linear-gradient(180deg,rgba(18,42,35,.96),rgba(10,27,24,.96));color:#eaffdf;min-height:50px;padding:0 24px;border-radius:12px;font:900 13px/1 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.28),0 0 24px rgba(182,240,156,.07);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.early-access-button:hover,.early-access-button:focus-visible{transform:translateY(-1px);border-color:#b6f09c;box-shadow:0 14px 40px rgba(0,0,0,.34),0 0 28px rgba(182,240,156,.14);outline:none}
+.waitlist-modal[hidden]{display:none}
+.waitlist-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:rgba(2,7,10,.82);backdrop-filter:blur(12px)}
+.waitlist-card{width:min(92vw,520px);background:#091419;border:1px solid rgba(125,211,252,.26);box-shadow:0 24px 80px rgba(0,0,0,.56),0 0 44px rgba(125,211,252,.06);border-radius:18px;padding:28px;color:var(--text)}
+.waitlist-card h2{margin:0 0 8px;font-size:28px;letter-spacing:-.025em}
+.waitlist-card p{margin:0 0 20px;color:var(--muted);line-height:1.55}
+.waitlist-card label{display:block;margin:14px 0 6px;font-size:13px;color:#bfd0d5}
+.waitlist-card input{box-sizing:border-box;width:100%;padding:13px 14px;border-radius:10px;border:1px solid #2b444d;background:#03090c;color:var(--text);font:inherit;outline:none}
+.waitlist-card input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(125,211,252,.12)}
+.waitlist-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.waitlist-actions button{border-radius:10px;padding:11px 15px;font:700 14px system-ui,-apple-system,sans-serif;cursor:pointer}
+.waitlist-cancel{border:1px solid #2b444d;background:#0b171c;color:#d7e4e7}
+.waitlist-submit{border:1px solid #b6f09c;background:#163025;color:#edffe5}
+.waitlist-submit:disabled{opacity:.55;cursor:wait}
+.waitlist-status{min-height:22px;margin-top:14px;font-size:14px;color:#b6f09c}
+.waitlist-close{float:right;border:0;background:transparent;color:#9fb2ba;font-size:24px;cursor:pointer;line-height:1}
+.waitlist-hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 .hero{padding:92px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:900}
 h1{font-size:clamp(46px,7vw,86px);line-height:.96;letter-spacing:-.055em;margin:14px 0 22px;max-width:930px}
@@ -86,6 +106,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
 
 <div class="brand-header" aria-label="ClawKraft">
   <img src="/assets/clawkraft-header-v2.webp?v=8436-valid" width="1536" height="512" alt="ClawKraft — Engineered to grip. Built to last. Turnkey, governed, provider-agnostic.">
+</div>
+
+<div class="early-access-bar">
+  <button class="early-access-button waitlist-trigger" type="button">Join Early Access</button>
 </div>
 
 <main>
@@ -276,5 +300,100 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
     </div>
   </div>
 </footer>
+
+<div class="waitlist-modal" id="waitlistModal" hidden aria-hidden="true">
+  <div class="waitlist-card" role="dialog" aria-modal="true" aria-labelledby="waitlistTitle">
+    <button class="waitlist-close" id="waitlistClose" type="button" aria-label="Close">×</button>
+    <h2 id="waitlistTitle">Join Early Access</h2>
+    <p>Join the ClawKraft early access waitlist. We’ll let you know when access opens.</p>
+    <form id="waitlistForm" novalidate>
+      <label for="waitlistName">Name <span aria-hidden="true">(optional)</span></label>
+      <input id="waitlistName" name="name" maxlength="80" autocomplete="name">
+      <label for="waitlistEmail">Email</label>
+      <input id="waitlistEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+      <div class="waitlist-hp" aria-hidden="true">
+        <label for="waitlistWebsite">Website</label>
+        <input id="waitlistWebsite" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="waitlist-actions">
+        <button class="waitlist-cancel" id="waitlistCancel" type="button">Cancel</button>
+        <button class="waitlist-submit" id="waitlistSubmit" type="submit">Join Waitlist</button>
+      </div>
+      <div class="waitlist-status" id="waitlistStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+(() => {
+  const ENDPOINT = 'https://mgudasuaekvyohwoihnj.supabase.co/functions/v1/clawkraft-waitlist';
+  const modal = document.getElementById('waitlistModal');
+  const form = document.getElementById('waitlistForm');
+  const email = document.getElementById('waitlistEmail');
+  const name = document.getElementById('waitlistName');
+  const website = document.getElementById('waitlistWebsite');
+  const status = document.getElementById('waitlistStatus');
+  const submit = document.getElementById('waitlistSubmit');
+
+  function openWaitlist() {
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    status.textContent = '';
+    requestAnimationFrame(() => email.focus());
+  }
+  function closeWaitlist() {
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  document.querySelectorAll('.waitlist-trigger').forEach(el => el.addEventListener('click', openWaitlist));
+  document.getElementById('waitlistClose').addEventListener('click', closeWaitlist);
+  document.getElementById('waitlistCancel').addEventListener('click', closeWaitlist);
+  modal.addEventListener('click', e => { if (e.target === modal) closeWaitlist(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeWaitlist(); });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const cleanEmail = email.value.trim().toLowerCase();
+    const cleanName = name.value.trim();
+    if (!cleanEmail) { status.textContent = 'Email is required.'; email.focus(); return; }
+    if (cleanEmail.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+      status.textContent = 'Enter a valid email address.'; email.focus(); return;
+    }
+    if (cleanName.length > 80) { status.textContent = 'Name must be 80 characters or fewer.'; name.focus(); return; }
+
+    submit.disabled = true;
+    status.textContent = 'Joining…';
+    try {
+      const r = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({name: cleanName, email: cleanEmail, website: website.value.trim()})
+      });
+      let data = {};
+      try { data = await r.json(); } catch {}
+      if (r.status === 201 || (r.ok && data.ok)) {
+        status.textContent = 'You’re on the ClawKraft waitlist. Thank you.';
+        form.reset();
+        return;
+      }
+      if (r.status === 409) {
+        status.textContent = data.error || 'That email is already on the waitlist.';
+        return;
+      }
+      if (r.status === 400) {
+        status.textContent = data.error || 'Please check the form and try again.';
+        return;
+      }
+      status.textContent = data.error || 'Unable to join right now. Please try again.';
+    } catch {
+      status.textContent = 'Connection error. Please try again.';
+    } finally {
+      submit.disabled = false;
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
