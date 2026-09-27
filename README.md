@@ -2,6 +2,21 @@
 
 Public website and onboarding front door for ClawKraft.
 
+## Surfaces
+
+See `docs/IA.md` for the landing-page information architecture.
+
+- `/` — landing
+- `/product/` — product overview
+- `/how-it-works/` — how it works
+- `/use-cases/` — use cases
+- `/security/` — security and trust
+- `/get-started/` — onboarding front door
+- `/docs/` — public docs entry
+- `/status/` — coarse public status
+
+Get Started routes to `https://setup.clawkraft.dev/signup`. Login routes to `https://app.clawkraft.dev/`. Privileged controls stay off `clawkraft.com`.
+
 ## Repository boundary
 
 This repository owns the public `clawkraft.com` web experience only.

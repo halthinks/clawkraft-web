@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ClawKraft security and trust: isolation, governed review and deployment, private workloads, and a clear public/operational boundary.">
+<title>Security &amp; Trust — ClawKraft</title>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">CLAWKRAFT</a>
+    <div class="nav-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/" aria-current="page">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a class="button ghost nav-keep" href="https://app.clawkraft.dev/">Login</a>
+      <a class="button primary nav-keep" href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="/">Home</a> / Security</div>
+    <div class="eyebrow">Security &amp; trust</div>
+    <h1>Governed execution with a clear boundary.</h1>
+    <p class="lede">ClawKraft is designed so useful work can advance without collapsing isolation, review, or privacy. The public product surface explains the system. Authenticated operational surfaces run it. Privileged state stays off clawkraft.com.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+      <a class="button secondary" href="/docs/privacy/">Privacy</a>
+      <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Trust posture</div><h2>Isolation, evidence, and authority — by design.</h2></div>
+        <p class="section-copy">Security on ClawKraft is not a single switch. It is the combination of execution isolation, governed review and deployment, durable evidence, and a hard split between public explanation and operational control.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Isolated execution</h3><p>Worktrees, disposable CI, containers, resource limits, and host-qualified isolation help keep parallel work from fighting over one shared mutable environment.</p></article>
+        <article class="card"><h3>Governed review</h3><p>Changes move through diff inspection, corrective work, tests, evidence, approval, and handoff before accepted state advances.</p></article>
+        <article class="card"><h3>Governed deployment</h3><p>Deployment is bound to authorization, required evidence, rollback behavior, production verification, and durable receipts.</p></article>
+        <article class="card"><h3>Private workloads</h3><p>Project-specific Programs, repositories, policies, credentials, and execution context stay private to the customer environment and authorized control surfaces.</p></article>
+        <article class="card"><h3>Durable evidence</h3><p>Checkpoints, receipts, evidence, and review state remain bound to the work that produced them so recovery does not invent proof after the fact.</p></article>
+        <article class="card"><h3>Explicit failure state</h3><p>Worker death, stale leases, provider loss, CI failure, review invalidation, merge races, and rollback become reconciled state rather than mystery.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Domain split</div><h2>clawkraft.com is public. clawkraft.dev is operational.</h2></div>
+        <p class="section-copy">This boundary keeps the product story useful without turning the public website into a privileged control plane.</p>
+      </div>
+      <div class="split">
+        <div class="band">
+          <div class="kicker">Public — clawkraft.com</div>
+          <div class="list">
+            <div class="item">Product, how-it-works, use cases, and security explanation</div>
+            <div class="item">Public docs entry and legal pages</div>
+            <div class="item">Get Started and Login entrypoints that route off-site</div>
+            <div class="item">Public status at a coarse availability level</div>
+          </div>
+        </div>
+        <div class="band">
+          <div class="kicker">Operational — clawkraft.dev</div>
+          <div class="list">
+            <div class="item">Setup and onboarding execution (setup.clawkraft.dev)</div>
+            <div class="item">Authenticated Mission Control (app.clawkraft.dev)</div>
+            <div class="item">Governed review surfaces (review.clawkraft.dev)</div>
+            <div class="item">External agent MCP attachment (mcp.clawkraft.dev/mcp)</div>
+          </div>
+        </div>
+      </div>
+      <p class="note">Privileged controls — pause, resume, stop, worker ON/OFF, Enable All, Disable All, Hard Stop, autonomy envelopes, authority envelope, and audit timelines — are not rendered on clawkraft.com.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Credential &amp; data boundary</div><h2>What this public surface will not contain.</h2></div>
+        <p class="section-copy">The public site may consume only intentionally public interfaces and contracts. It must not become a public mirror of private operational state.</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <div class="kicker">Never published here</div>
+          <div class="list">
+            <div class="item">Runtime or worker credentials</div>
+            <div class="item">Private project inventories and Program state</div>
+            <div class="item">Provider or deployment secrets</div>
+            <div class="item">Mission Control / runtime source</div>
+            <div class="item">Private operator runbooks or internal evidence</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="kicker">MCP boundary</div>
+          <h3>External agents attach through the canonical endpoint.</h3>
+          <p class="section-copy">External agents connect at <code>https://mcp.clawkraft.dev/mcp</code>. ClawKraft MCP traffic is not routed through unrelated MCP endpoints or vhosts.</p>
+          <p class="note">See <a href="/docs/" style="color:var(--accent)">Docs</a> for public integration entrypoints.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="card">
+        <div class="eyebrow">Privacy</div>
+        <h2>Personal data has a narrow purpose.</h2>
+        <p class="section-copy">Early-access contact details are used to manage access, communicate about availability, and operate and secure ClawKraft. They are not sold or shared for advertising.</p>
+        <div class="hero-actions"><a class="button secondary" href="/docs/privacy/">Read the Privacy Policy</a></div>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Support</div>
+        <h2>Questions about trust or access.</h2>
+        <p class="section-copy">Use the public support entry for product and early-access questions. Operational incidents are handled through authenticated channels on clawkraft.dev.</p>
+        <div class="hero-actions"><a class="button secondary" href="/docs/support/">Support</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap cta">
+    <div class="cta-box">
+      <div class="eyebrow">Get started</div>
+      <h2>Start on the public path. Operate on the authenticated path.</h2>
+      <div class="hero-actions">
+        <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+        <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
+        <a class="button secondary" href="/docs/">Docs</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© ClawKraft</div>
+    <div class="footer-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a href="/docs/privacy/">Privacy</a>
+      <a href="/docs/terms/">Terms</a>
+      <a href="/docs/support/">Support</a>
+      <a href="https://app.clawkraft.dev/">Login</a>
+      <a href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

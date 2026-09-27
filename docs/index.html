@@ -1,10 +1,146 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClawKraft Docs</title>
-<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:900px;margin:0 auto;padding:40px 24px;background:#081014;color:#eef7f8}a{color:#7dd3fc}.card{border:1px solid #29414a;border-radius:14px;padding:18px;margin:14px 0;background:#0d171c}code{background:#13232b;padding:2px 6px;border-radius:6px}</style></head>
-<body><h1>ClawKraft Documentation</h1><p>Public technical and integration documentation for ClawKraft.</p>
-<div class="card"><h2>Connect an agent</h2><p>Canonical MCP endpoint: <code>https://mcp.clawkraft.dev/mcp</code></p><p>OAuth issuer: <code>https://mcp.clawkraft.dev</code></p></div>
-<div class="card"><h2>Product surfaces</h2><p><a href="https://app.clawkraft.dev/">Mission Control</a> · <a href="https://setup.clawkraft.dev/">Setup</a> · <a href="https://review.clawkraft.dev/">Review</a> · <a href="https://status.clawkraft.dev/">Status</a></p></div>
-<div class="card"><h2>Capability Programs</h2><p>ClawKraft ships reusable capability Programs while keeping generated project Programs private. Capability discovery is available through the MCP catalog.</p></div>
-<p>Private runbooks, project inventories, credentials, and deployment evidence are intentionally not published here.</p>
-</body></html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ClawKraft public documentation entry: connect an agent, product surfaces, and integration endpoints.">
+<title>Docs — ClawKraft</title>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">CLAWKRAFT</a>
+    <div class="nav-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/status/">Status</a>
+      <a class="button ghost nav-keep" href="https://app.clawkraft.dev/">Login</a>
+      <a class="button primary nav-keep" href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="/">Home</a> / Docs</div>
+    <div class="eyebrow">Docs entry</div>
+    <h1>Public technical and integration documentation.</h1>
+    <p class="lede">Start here for agent attachment, product surface links, and the public contracts ClawKraft intentionally exposes. Private runbooks, credentials, and deployment evidence are not published here.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+      <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
+      <a class="button secondary" href="/security/">Security</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Connect an agent</div><h2>Canonical MCP endpoint.</h2></div>
+        <p class="section-copy">External agents attach independently through the supported MCP interface. ClawKraft MCP traffic is not routed through unrelated MCP endpoints or vhosts.</p>
+      </div>
+      <div class="band">
+        <div class="list">
+          <div class="item">Canonical MCP endpoint: <code>https://mcp.clawkraft.dev/mcp</code></div>
+          <div class="item">OAuth issuer: <code>https://mcp.clawkraft.dev</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Product surfaces</div><h2>Public site and operational apps.</h2></div>
+        <p class="section-copy">clawkraft.com explains the product. Authenticated applications on clawkraft.dev operate it.</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <div class="kicker">Public — clawkraft.com</div>
+          <div class="list">
+            <div class="item"><a href="/product/" style="color:var(--accent)">Product</a></div>
+            <div class="item"><a href="/how-it-works/" style="color:var(--accent)">How it Works</a></div>
+            <div class="item"><a href="/use-cases/" style="color:var(--accent)">Use Cases</a></div>
+            <div class="item"><a href="/security/" style="color:var(--accent)">Security</a></div>
+            <div class="item"><a href="/get-started/" style="color:var(--accent)">Get Started</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="kicker">Operational — clawkraft.dev</div>
+          <div class="list">
+            <div class="item"><a href="https://setup.clawkraft.dev/" style="color:var(--accent)">Setup</a></div>
+            <div class="item"><a href="https://app.clawkraft.dev/" style="color:var(--accent)">Mission Control</a></div>
+            <div class="item"><a href="https://review.clawkraft.dev/" style="color:var(--accent)">Review</a></div>
+            <div class="item"><a href="https://status.clawkraft.dev/" style="color:var(--accent)">Status</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="card">
+        <div class="eyebrow">Capability Programs</div>
+        <h2>Reusable capabilities. Private project Programs.</h2>
+        <p class="section-copy">ClawKraft ships reusable capability Programs while keeping generated project Programs private. Capability discovery is available through the MCP catalog.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Not published here</div>
+        <h2>Private operational material stays private.</h2>
+        <p class="section-copy">Private runbooks, project inventories, credentials, deployment evidence, and Mission Control runtime source are intentionally not part of this public docs surface.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Policy</div><h2>Privacy, terms, and support.</h2></div>
+        <p class="section-copy">Legal and support entrypoints for the public product surface.</p>
+      </div>
+      <div class="flow three">
+        <div class="step"><b>Privacy</b><span><a href="/docs/privacy/" style="color:var(--accent)">Privacy Policy</a> — how early-access and site data is used.</span></div>
+        <div class="step"><b>Terms</b><span><a href="/docs/terms/" style="color:var(--accent)">Terms</a> — public terms of use.</span></div>
+        <div class="step"><b>Support</b><span><a href="/docs/support/" style="color:var(--accent)">Support</a> — product and early-access questions.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap cta">
+    <div class="cta-box">
+      <div class="eyebrow">Next</div>
+      <h2>Read the product path, then start onboarding.</h2>
+      <div class="hero-actions">
+        <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+        <a class="button secondary" href="/how-it-works/">How it Works</a>
+        <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© ClawKraft</div>
+    <div class="footer-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a href="/docs/privacy/">Privacy</a>
+      <a href="/docs/terms/">Terms</a>
+      <a href="/docs/support/">Support</a>
+      <a href="https://app.clawkraft.dev/">Login</a>
+      <a href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

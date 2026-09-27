@@ -1,0 +1,32 @@
+{
+  "outcome": "PASS",
+  "generated_at": "2026-09-27T23:51:06.808Z",
+  "pages_captured": 16,
+  "screenshots": [
+    "output/qualification/SURF-003/home-desktop.png",
+    "output/qualification/SURF-003/product-desktop.png",
+    "output/qualification/SURF-003/how-it-works-desktop.png",
+    "output/qualification/SURF-003/use-cases-desktop.png",
+    "output/qualification/SURF-003/security-desktop.png",
+    "output/qualification/SURF-003/get-started-desktop.png",
+    "output/qualification/SURF-003/docs-desktop.png",
+    "output/qualification/SURF-003/status-desktop.png",
+    "output/qualification/SURF-003/home-mobile.png",
+    "output/qualification/SURF-003/product-mobile.png",
+    "output/qualification/SURF-003/how-it-works-mobile.png",
+    "output/qualification/SURF-003/use-cases-mobile.png",
+    "output/qualification/SURF-003/security-mobile.png",
+    "output/qualification/SURF-003/get-started-mobile.png",
+    "output/qualification/SURF-003/docs-mobile.png",
+    "output/qualification/SURF-003/status-mobile.png"
+  ],
+  "checks_total": 80,
+  "checks_failed": 0,
+  "get_started_destinations": [
+    "https://setup.clawkraft.dev/signup",
+    "https://setup.clawkraft.dev/"
+  ],
+  "login_destinations": [
+    "https://app.clawkraft.dev/"
+  ]
+}
