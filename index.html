@@ -75,6 +75,27 @@ h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.035em;line-height:1.05;margin
 .card{background:linear-gradient(180deg,var(--panel),#0c171c);border:1px solid var(--line);border-radius:16px;padding:22px}
 .card h3{margin:0 0 8px;font-size:18px}
 .card p{margin:0;color:var(--muted);line-height:1.6}
+.capability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.capability-card{min-height:180px;display:flex;flex-direction:column;justify-content:space-between}
+.capability-card .cap-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:900;margin-bottom:14px}
+.capability-card strong{font-size:19px;line-height:1.25;margin-bottom:8px}
+.product-shots{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.product-shot{background:#081217;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.product-shot img{display:block;width:100%;height:auto;background:#0b171c}
+.product-shot-copy{padding:18px 20px 20px}
+.product-shot-copy h3{margin:0 0 7px;font-size:20px}
+.product-shot-copy p{margin:0;color:var(--muted);line-height:1.6}
+.comparison-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#0c171c}
+.comparison{width:100%;border-collapse:collapse;min-width:780px}
+.comparison th,.comparison td{padding:17px 18px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;line-height:1.5}
+.comparison th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#bfd0d5;background:#102129}
+.comparison td:first-child{font-weight:800;color:var(--text);width:18%}
+.comparison td{color:#b8cbd1}
+.comparison tr:last-child td{border-bottom:0}
+.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.use-card{min-height:190px}
+.use-card .use-label{display:inline-block;margin-bottom:14px;font:800 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;color:var(--accent)}
+.callout{margin-top:18px;padding:18px 20px;border-left:3px solid var(--accent2);background:rgba(182,240,156,.045);color:#cfe0e4;line-height:1.65}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .step{border:1px solid var(--line);border-radius:14px;padding:18px;background:rgba(15,29,35,.72)}
 .step b{display:block;margin-bottom:7px}.step span{color:var(--muted);font-size:14px;line-height:1.5}
@@ -91,8 +112,8 @@ h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.035em;line-height:1.05;margin
 footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap}
-@media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}}
-@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow{grid-template-columns:1fr}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}}
+@media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}.capability-grid{grid-template-columns:1fr 1fr}.product-shots{grid-template-columns:1fr}.use-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow,.capability-grid,.use-grid{grid-template-columns:1fr}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}.comparison th,.comparison td{padding:14px}}
 </style>
 </head>
 <body>
@@ -150,6 +171,44 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
     </div>
   </div>
 
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">What ClawKraft gives you</div><h2>An execution system, not just another place to run code.</h2></div>
+        <p class="section-copy">Use ClawKraft as the layer that turns infrastructure, agents, credentials, project state, review, and deployment into one durable operating system for AI work. Keep the tools you already use; add the coordination and control that makes them work together.</p>
+      </div>
+      <div class="capability-grid">
+        <article class="card capability-card"><div><div class="cap-label">Compute</div><strong>Sandboxes, VMs, VPSs, workstations, and disposable CI</strong><p>Qualify execution environments and make them available to workers without treating every machine as a one-off setup project.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Credentials</div><strong>Vault-backed secrets and credential brokerage</strong><p>Keep credentials governed and scoped to the work that needs them instead of copying long-lived secrets into every worker environment.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Workforce</div><strong>Persistent workers across providers and sessions</strong><p>Connect coding agents, browser agents, native workers, long-running workers, and external agents through the same execution model.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Programs</div><strong>Dependency-aware orchestration from objective to delivery</strong><p>Preserve the roadmap, dependency frontier, acceptance gates, evidence, handoffs, and next available work as durable project state.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Recovery</div><strong>Checkpoint and hand off work when a worker disappears</strong><p>Workers can change without forcing the project to restart from a transcript or reconstruct what happened manually.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Control</div><strong>Mission Control for programs, workers, decisions, cost, and policy</strong><p>See what is running, what is blocked, what needs a decision, who can receive work, and what the next transition is.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Connectivity</div><strong>MCP as a first-class attachment surface</strong><p>External agents can connect to ClawKraft rather than requiring every client to learn the private topology of your infrastructure.</p></div></article>
+        <article class="card capability-card"><div><div class="cap-label">Delivery</div><strong>Evidence-bound review, merge, deployment, and verification</strong><p>Move work forward when current proof says it is ready—not simply because an agent says it finished.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="product-views">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Product views</div><h2>From onboarding to operating the workforce.</h2></div>
+        <p class="section-copy">ClawKraft is designed to be usable as a product, not only as a CLI or a collection of backend primitives. The public onboarding path explains what happens next; authenticated Mission Control exposes the operational state and decisions that matter.</p>
+      </div>
+      <div class="product-shots">
+        <figure class="product-shot">
+          <img src="/output/qualification/SURF-003/get-started-desktop.png" alt="ClawKraft onboarding path showing how a customer gets started" loading="lazy">
+          <figcaption class="product-shot-copy"><h3>Onboarding</h3><p>Start with the infrastructure and agents you already have, then move through setup, qualification, connection, and the authenticated operating surface.</p></figcaption>
+        </figure>
+        <figure class="product-shot">
+          <img src="/assets/mission-control-overview.svg" alt="ClawKraft Mission Control product view with program progress, worker controls, work graph, decisions, and audit state" loading="lazy">
+          <figcaption class="product-shot-copy"><h3>Mission Control</h3><p>Program progress, next transitions, worker/provider state, autonomy, blocking decisions, cost, authority, and audit history in one operational view.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section id="product">
     <div class="wrap">
       <div class="section-head">
@@ -164,6 +223,29 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
         <article class="card"><h3>Governed deployment</h3><p>Bind deployment to authorization, evidence, rollback behavior, production verification, and durable receipts.</p></article>
         <article class="card"><h3>Private workloads</h3><p>Ship generic platform capabilities while keeping project-specific Programs, repositories, policies, credentials, and execution context private.</p></article>
       </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Where ClawKraft fits</div><h2>Compute and sandboxes are part of the system—not the whole system.</h2></div>
+        <p class="section-copy">Modal and Daytona solve important infrastructure problems. ClawKraft overlaps at the execution layer, then extends into durable workers, project orchestration, credential brokerage, human decision points, evidence, and delivery.</p>
+      </div>
+      <div class="comparison-wrap">
+        <table class="comparison">
+          <thead><tr><th>Capability</th><th>ClawKraft</th><th>Modal</th><th>Daytona</th></tr></thead>
+          <tbody>
+            <tr><td>Execution environments</td><td>Coordinates qualified sandboxes, disposable CI, containers, customer hosts, VMs, and other execution lanes as worker resources.</td><td>Cloud compute and secure isolated sandboxes with configurable CPU, memory, GPU, storage, networking, and secrets.</td><td>Sandbox infrastructure is the center of the product, including containers and first-class Linux/Windows VM sandboxes.</td></tr>
+            <tr><td>VM / host model</td><td>Bring your own VPS, workstation, or cloud host and commission it into the workforce alongside other execution providers.</td><td>Primarily a managed cloud execution and sandbox platform rather than a general customer-host commissioning layer.</td><td>Provides managed VM sandbox classes, snapshots, forks, pause/resume, and related environment lifecycle primitives.</td></tr>
+            <tr><td>Secrets / vaults</td><td>Credential brokerage is tied to worker identity, execution policy, project context, and auditable delivery paths.</td><td>Named secrets can be injected into functions and sandboxes as environment variables.</td><td>Organization secrets use opaque placeholders and outbound substitution, with host allowlists for scoped use.</td></tr>
+            <tr><td>Orchestration</td><td>Persistent workers, dependencies, leases, checkpoints, decisions, review, evidence, acceptance, merge, deployment, and recovery.</td><td>Orchestrates cloud functions, jobs, and sandbox compute; project/program governance is outside its core abstraction.</td><td>Orchestrates sandbox lifecycle and parallel environments; higher-level project/program governance is not the primary abstraction.</td></tr>
+            <tr><td>MCP</td><td>First-class control and attachment surface for external agents to discover and use governed ClawKraft capabilities.</td><td>MCP can run on Modal infrastructure, but it is not the central control abstraction of the platform.</td><td>Provides a dedicated MCP server for sandbox, filesystem, Git, process, computer-use, and preview operations.</td></tr>
+            <tr><td>Durability</td><td>Durability follows the work: assignment, checkpoint, evidence, acceptance, handoff, and recovery survive worker/session changes.</td><td>Durability is centered on managed compute objects, volumes, and sandbox state.</td><td>Durability is centered on sandbox persistence, snapshots, forks, volumes, and VM memory/filesystem capture.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Short version:</strong> Modal gives agents elastic compute. Daytona gives agents composable computers. ClawKraft connects compute, computers, credentials, workers, project state, and delivery into one execution system.</div>
     </div>
   </section>
 
@@ -233,11 +315,22 @@ accepted result</div>
     </div>
   </section>
 
-  <section>
+  <section id="use-cases">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="eyebrow">Use cases</div><h2>Work that needs to keep going.</h2></div>
-        <p class="section-copy">Multi-agent product delivery, long-running research-to-execution Programs, bring-your-own-infrastructure teams, external agent attachment, and recovery after worker failure.</p>
+        <div><div class="eyebrow">Use cases</div><h2>Work that needs more than a single agent session.</h2></div>
+        <p class="section-copy">ClawKraft is useful when the work has dependencies, multiple tools or workers, infrastructure requirements, failure modes, or a real delivery gate. The common thread is that progress needs to remain understandable and resumable after the current chat disappears.</p>
+      </div>
+      <div class="use-grid">
+        <article class="card use-card"><span class="use-label">BUILD</span><h3>Multi-agent product delivery</h3><p>Let different workers research, implement, review, test, correct, and deploy parts of the same product without losing the dependency graph between them.</p></article>
+        <article class="card use-card"><span class="use-label">R2E</span><h3>Research → execution</h3><p>Turn research, whitepapers, unfinished concepts, and projected use cases into reconciled program state, prioritized work, acceptance gates, and execution.</p></article>
+        <article class="card use-card"><span class="use-label">INFRA</span><h3>Bring-your-own infrastructure</h3><p>Commission a VPS, workstation, VM host, or other compatible machine into a governed execution fleet instead of hand-wiring a new runner each time.</p></article>
+        <article class="card use-card"><span class="use-label">PARALLEL</span><h3>Disposable execution for parallel work</h3><p>Give workers isolated CI and execution environments so parallel tasks can prove themselves without fighting over one mutable shared box.</p></article>
+        <article class="card use-card"><span class="use-label">CONNECT</span><h3>Attach external agents through MCP</h3><p>Give compatible clients a stable governed interface to the execution system while keeping private infrastructure topology and credentials behind the control plane.</p></article>
+        <article class="card use-card"><span class="use-label">RECOVER</span><h3>Resume after worker or provider failure</h3><p>Preserve checkpoints, leases, receipts, evidence, and assignment state so another worker can continue when a session, process, or provider disappears.</p></article>
+        <article class="card use-card"><span class="use-label">OPERATE</span><h3>Operate a mixed AI workforce</h3><p>Keep coding agents, browser agents, native workers, and long-running workers visible and controllable from one program-aware operating surface.</p></article>
+        <article class="card use-card"><span class="use-label">SECRETS</span><h3>Broker credentials to the work that needs them</h3><p>Keep secrets managed through governed vault and credential paths instead of spreading raw credentials across prompts, shells, and worker-local config.</p></article>
+        <article class="card use-card"><span class="use-label">DELIVER</span><h3>Govern deployment and production proof</h3><p>Require current evidence, authorization, rollback behavior, production verification, and durable receipts before delivery is treated as complete.</p></article>
       </div>
       <div class="hero-actions">
         <a class="button secondary" href="/use-cases/">Explore use cases</a>

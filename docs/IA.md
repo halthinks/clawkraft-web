@@ -9,6 +9,7 @@ Status: implementation-ready for `clawkraft.com` public product and onboarding f
 Public site may contain:
 
 - product explanation and capability overview;
+- non-interactive product screenshots/previews of authenticated surfaces, using only synthetic or intentionally public data and exposing no privileged action path;
 - how-it-works narrative;
 - use cases;
 - security and trust positioning;
@@ -65,21 +66,24 @@ Primary nav on every marketing surface:
 
 Footer repeats Docs, Status, Privacy, Terms, Support, and the off-site Login / Get Started routes.
 
-No privileged controls appear in public chrome. Pause/resume/stop, worker ON/OFF, Hard Stop, authority envelope, and Mission Control runtime panels remain on `app.clawkraft.dev`.
+No privileged controls are operable from public chrome. Pause/resume/stop, worker ON/OFF, Hard Stop, authority envelope changes, and Mission Control runtime actions remain on `app.clawkraft.dev`. The public site may show non-interactive product screenshots/previews when they contain only synthetic or intentionally public state.
 
 ## Landing page (`/`) narrative order
 
 1. **Header brand strip** — identity only.
 2. **Early-access bar** — waitlist CTA (public, no privileged state).
 3. **Hero** — value proposition, Get Started / Login-aware CTAs, terminal-style proof of durable execution.
-4. **Product overview** — what the execution fabric does (summary; deep-dive on `/product/`).
-5. **Bring your own infrastructure** — commission path (summary; deep-dive on `/how-it-works/`).
-6. **Use-case teaser** — who this is for (summary; deep-dive on `/use-cases/`).
-7. **Security & trust teaser** — governance/isolation posture (summary; deep-dive on `/security/`).
-8. **Governed delivery** — execute → review → evidence → deliver.
-9. **Architecture boundary** — `.com` explains; `.dev` operates; control plane is authoritative.
-10. **Final CTA** — Get Started, Docs, Login.
-11. **Footer** — public links only.
+4. **Capability display** — sandboxing/VMs, vault-backed credentials, workers, Programs, recovery, MCP, Mission Control, and governed delivery.
+5. **Product views** — non-interactive onboarding and Mission Control visuals using public/synthetic state only.
+6. **Product overview** — what the execution fabric does (summary; deep-dive on `/product/`).
+7. **Positioning comparison** — explain where ClawKraft overlaps with compute/sandbox platforms and where the durable execution/control-plane scope extends further.
+8. **Bring your own infrastructure** — commission path (summary; deep-dive on `/how-it-works/`).
+9. **Use-case display** — concrete work shapes and operational outcomes (deep-dive on `/use-cases/`).
+10. **Security & trust teaser** — governance/isolation posture (summary; deep-dive on `/security/`).
+11. **Governed delivery** — execute → review → evidence → deliver.
+12. **Architecture boundary** — `.com` explains; `.dev` operates; control plane is authoritative.
+13. **Final CTA** — Get Started, Docs, Login.
+14. **Footer** — public links only.
 
 ## Surface content contracts
 
