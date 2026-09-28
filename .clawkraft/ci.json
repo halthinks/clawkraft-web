@@ -15,7 +15,43 @@
         [
           "python3",
           "-c",
-          "from pathlib import Path; s=Path('index.html').read_text(); assert 'Join Early Access Waitlist' in s; assert '/docs/privacy/' in s; assert Path('assets/clawkraft-header-v2.webp').is_file(); assert Path('docs/privacy/index.html').is_file(); print('clawkraft-web static qualification: PASS')"
+          "from pathlib import Path; s=Path('index.html').read_text(); assert 'Join Early Access Waitlist' in s; assert '/docs/privacy/' in s; assert Path('assets/clawkraft-header-v2.webp').is_file(); assert Path('assets/site.css').is_file(); assert Path('docs/privacy/index.html').is_file(); assert Path('docs/IA.md').is_file(); print('clawkraft-web static qualification: PASS')"
+        ]
+      ]
+    },
+    {
+      "id": "surfaces",
+      "title": "Validate public product and onboarding surfaces",
+      "required": true,
+      "timeout_seconds": 300,
+      "network": false,
+      "capabilities": [
+        "runtime.python"
+      ],
+      "artifacts": [],
+      "commands": [
+        [
+          "python3",
+          "-c",
+          "from pathlib import Path\npages=['index.html','product/index.html','how-it-works/index.html','use-cases/index.html','security/index.html','get-started/index.html','docs/index.html','status/index.html']\nfor p in pages:\n    assert Path(p).is_file(), p\n    t=Path(p).read_text()\n    assert 'https://setup.clawkraft.dev/signup' in t, p+' missing Get Started route'\n    assert 'https://app.clawkraft.dev/' in t, p+' missing Login route'\nprint('clawkraft-web surfaces qualification: PASS')"
+        ]
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "Validate privileged controls stay off clawkraft.com",
+      "required": true,
+      "timeout_seconds": 300,
+      "network": false,
+      "capabilities": [
+        "runtime.python"
+      ],
+      "artifacts": [],
+      "commands": [
+        [
+          "python3",
+          "-c",
+          "from pathlib import Path\nforbidden_ids=['hardstop','enableall','disableall','workertoggle','authorityenvelope','pauseprogram','resumeprogram']\nfor p in Path('.').rglob('*.html'):\n    if any(part.startswith('.') for part in p.parts):\n        continue\n    t=p.read_text().lower()\n    for fid in forbidden_ids:\n        assert f'id=\"{fid}' not in t, f'{p} contains privileged control marker {fid}'\nidx=Path('index.html').read_text()\nassert 'href=\"https://setup.clawkraft.dev/signup\"' in idx\nassert 'href=\"https://app.clawkraft.dev/\"' in idx\nprint('clawkraft-web boundary qualification: PASS')"
         ]
       ]
     }

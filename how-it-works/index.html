@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="How ClawKraft works: commission infrastructure, attach workers, run governed Programs, and deliver with evidence.">
+<title>How it Works — ClawKraft</title>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">CLAWKRAFT</a>
+    <div class="nav-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/" aria-current="page">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a class="button ghost nav-keep" href="https://app.clawkraft.dev/">Login</a>
+      <a class="button primary nav-keep" href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="/">Home</a> / How it Works</div>
+    <div class="eyebrow">How it works</div>
+    <h1>From a normal machine to governed execution.</h1>
+    <p class="lede">A customer should not have to manually wire every runner, credential, lifecycle path, browser, and CI environment over SSH. ClawKraft turns supported infrastructure into a qualified host that can participate in the workforce.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+      <a class="button secondary" href="/product/">Product</a>
+      <a class="button secondary" href="/docs/">Docs</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Four stages</div><h2>Infrastructure → Setup → Workforce → Programs.</h2></div>
+        <p class="section-copy">Each stage has a clear job. You keep control of the infrastructure. ClawKraft makes it usable as part of a coordinated workforce.</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>1. Infrastructure</b><span>VPS, workstation, or cloud host you control.</span></div>
+        <div class="step"><b>2. Setup</b><span>Commission and qualify execution capabilities.</span></div>
+        <div class="step"><b>3. Workforce</b><span>Attach compatible workers and providers.</span></div>
+        <div class="step"><b>4. Programs</b><span>Execute dependency-aware work with durable state.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="band">
+        <div class="eyebrow">Commission</div>
+        <h2>Bring a normal machine. Commission an execution host.</h2>
+        <p class="section-copy">The host can provide the capabilities the workload needs: source checkout, isolated workspaces, CI, browsers, containers, data services, persistent storage, and reusable warm environments.</p>
+        <div class="arch">VPS / workstation / cloud host
+        ↓
+ClawKraft Setup
+        ↓
+qualified execution host
+        ↓
+workers
+        ↓
+Programs</div>
+        <div class="hero-actions"><a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a></div>
+      </div>
+      <div class="card">
+        <div class="kicker">Worker shapes</div>
+        <h3>Use the agents you already have.</h3>
+        <p class="section-copy">ClawKraft can coordinate different worker shapes without pretending they are interchangeable:</p>
+        <div class="list">
+          <div class="item">Interactive chat workers</div>
+          <div class="item">Long-running goal workers</div>
+          <div class="item">Coding agents</div>
+          <div class="item">Browser agents</div>
+          <div class="item">Local or native workers</div>
+          <div class="item">External workers connected through supported interfaces</div>
+        </div>
+        <p class="note">A compatible session can join the workforce, accept governed work, save progress, disappear, and be replaced by another worker without forcing the project to restart from chat history.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Durable execution</div><h2>Progress should survive worker failure.</h2></div>
+        <p class="section-copy">Real execution systems lose processes, sessions, providers, leases, and network connections. ClawKraft is designed around durable state so work can be recovered instead of silently disappearing.</p>
+      </div>
+      <div class="split">
+        <div class="card">
+          <div class="kicker">Handoff model</div>
+          <h3 style="font-size:24px">Worker A starts → checkpoint → Worker A disappears → Worker B resumes → evidence → review → completion</h3>
+          <p class="note">When a worker disappears, the next worker continues from durable project state rather than re-inventing the work from conversation history.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Preserved state</div>
+          <div class="list">
+            <div class="item">Assignment state and worker identity</div>
+            <div class="item">Leases and generations</div>
+            <div class="item">Checkpoints and receipts</div>
+            <div class="item">Evidence and review state</div>
+            <div class="item">Handoff state and recovery history</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Governed delivery</div><h2>Execution is only part of the job.</h2></div>
+        <p class="section-copy">ClawKraft carries work through a delivery path that separates producing a change from proving, reviewing, accepting, merging, and deploying it.</p>
+      </div>
+      <div class="flow">
+        <div class="step"><b>Execute</b><span>Worker performs the bounded work.</span></div>
+        <div class="step"><b>Inspect + correct</b><span>Review the diff and resolve findings.</span></div>
+        <div class="step"><b>Test + evidence</b><span>Produce current qualification and proof.</span></div>
+        <div class="step"><b>Approve + deliver</b><span>Merge, deploy, verify, and preserve receipts.</span></div>
+      </div>
+      <div class="band arch" style="margin-top:18px">execute → inspect diff → correct → test → evidence → approve → merge → deploy → verify</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Architecture</div><h2>Clear surfaces. One authority.</h2></div>
+        <p class="section-copy">The public website explains the product. Authenticated applications operate it. The private ClawKraft control plane remains authoritative for execution state and privileged actions.</p>
+      </div>
+      <div class="band arch">clawkraft.com
+      ↓
+setup.clawkraft.dev
+      ↓
+app.clawkraft.dev  ←→  review.clawkraft.dev
+      ↓
+ClawKraft control plane
+      ↓
+execution hosts + workers
+
+External agents: https://mcp.clawkraft.dev/mcp</div>
+      <p class="note">Privileged controls (pause, resume, stop, worker ON/OFF, Hard Stop, authority envelope) are available only in authenticated Mission Control on app.clawkraft.dev — not on clawkraft.com.</p>
+    </div>
+  </section>
+
+  <div class="wrap cta">
+    <div class="cta-box">
+      <div class="eyebrow">Next step</div>
+      <h2>Commission a host, attach workers, and run a governed Program.</h2>
+      <div class="hero-actions">
+        <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+        <a class="button secondary" href="/get-started/">Onboarding path</a>
+        <a class="button secondary" href="/docs/">Connect an Agent</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© ClawKraft</div>
+    <div class="footer-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a href="/docs/privacy/">Privacy</a>
+      <a href="/docs/terms/">Terms</a>
+      <a href="/docs/support/">Support</a>
+      <a href="https://app.clawkraft.dev/">Login</a>
+      <a href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

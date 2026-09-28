@@ -1,0 +1,38 @@
+{
+  "schema": "clawkraft/qualification-evidence/v1",
+  "work_id": "SURF-003",
+  "requirement_id": "SURF-003-EV-01",
+  "check_id": "render-and-routing",
+  "generated_at": "2026-09-27T23:55:00.000Z",
+  "base_url": "http://127.0.0.1:8765",
+  "viewports": [
+    { "id": "desktop", "width": 1440, "height": 900 },
+    { "id": "mobile", "width": 390, "height": 844 }
+  ],
+  "method": "Playwright chrome-headless-shell DOM checks + full-page screenshots + PNG pixel sampling",
+  "results": {
+    "pages_checked": 16,
+    "failed": 0,
+    "criteria": [
+      "HTTP 200",
+      "h1 present and visible",
+      "brand chrome visible",
+      "visible Get Started link routes to https://setup.clawkraft.dev/signup",
+      "visible Login link routes to https://app.clawkraft.dev/",
+      "no horizontal overflow",
+      "no privileged control element ids",
+      "dark theme pixels sampled on desktop/mobile screenshots"
+    ],
+    "get_started_destinations": ["https://setup.clawkraft.dev/signup"],
+    "login_destinations": ["https://app.clawkraft.dev/"],
+    "pixel_samples": [
+      { "file": "home-desktop.png", "point": [20, 20], "rgb": [6, 16, 20], "dark": true },
+      { "file": "home-desktop.png", "point": [720, 200], "rgb": [14, 19, 29], "dark": true },
+      { "file": "home-mobile.png", "point": [20, 20], "rgb": [6, 16, 20], "dark": true },
+      { "file": "home-mobile.png", "point": [390, 200], "rgb": [18, 20, 26], "dark": true },
+      { "file": "get-started-desktop.png", "point": [20, 20], "rgb": [6, 16, 20], "dark": true },
+      { "file": "status-desktop.png", "point": [720, 200], "rgb": [6, 16, 21], "dark": true }
+    ]
+  },
+  "outcome": "PASS"
+}

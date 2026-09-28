@@ -29,6 +29,7 @@ nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:11px;border:1px solid var(--line);font-weight:800}
 .button.primary{background:var(--text);color:#071014;border-color:var(--text)}
 .button.secondary{background:var(--panel);color:var(--text)}
+.button.ghost{background:transparent;color:var(--muted)}
 .brand-header{width:100%;background:#02070a;border-bottom:1px solid rgba(34,56,64,.75);line-height:0;overflow:hidden}
 .brand-header img{display:block;width:100%;height:auto;margin:0 auto;object-fit:contain}
 
@@ -91,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap}
 @media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}}
-@media(max-width:620px){.nav-links a:not(.button){display:none}.hero{padding-top:54px}.grid,.flow{grid-template-columns:1fr}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}}
+@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow{grid-template-columns:1fr}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}}
 </style>
 </head>
 <body>
@@ -99,11 +100,14 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
   <div class="wrap nav-inner">
     <a class="brand" href="/">CLAWKRAFT</a>
     <div class="nav-links">
-      <a href="#product">Product</a>
-      <a href="#mission-control">Mission Control</a>
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
       <a href="/docs/">Docs</a>
       <a href="/status/">Status</a>
-      <a class="button secondary" href="https://app.clawkraft.dev/">Open App</a>
+      <a class="button ghost nav-keep" href="https://app.clawkraft.dev/">Login</a>
+      <a class="button primary nav-keep" href="https://setup.clawkraft.dev/signup">Get Started</a>
     </div>
   </div>
 </nav>
@@ -124,7 +128,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
       <p class="lede">Bring a VPS, workstation, cloud host, or existing execution environment. Connect the agents and providers you already use. ClawKraft coordinates work, preserves progress across worker changes, and governs how work is reviewed, accepted, merged, and deployed.</p>
       <div class="hero-actions">
         <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
-        <a class="button secondary" href="https://app.clawkraft.dev/">Open Mission Control</a>
+        <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
         <a class="button secondary" href="/docs/">Connect an Agent</a>
       </div>
       <div class="proof">Persistent workers · isolated execution · durable handoffs · governed delivery</div>
@@ -190,7 +194,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
           <div class="item">Pause, Resume, Stop, worker ON/OFF, Enable All, Disable All, and Hard Stop</div>
           <div class="item">Work graph, decision inbox, authority envelope, and audit timeline</div>
         </div>
-        <div class="hero-actions"><a class="button primary" href="https://app.clawkraft.dev/">Open Mission Control</a></div>
+        <div class="hero-actions"><a class="button primary" href="https://app.clawkraft.dev/">Open Mission Control</a> <a class="button secondary" href="https://app.clawkraft.dev/">Login</a></div>
       </div>
       <div class="card">
         <div class="kicker">Durable execution</div>
@@ -226,6 +230,32 @@ evidence
 review
         ↓
 accepted result</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Use cases</div><h2>Work that needs to keep going.</h2></div>
+        <p class="section-copy">Multi-agent product delivery, long-running research-to-execution Programs, bring-your-own-infrastructure teams, external agent attachment, and recovery after worker failure.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button secondary" href="/use-cases/">Explore use cases</a>
+        <a class="button secondary" href="/how-it-works/">How it Works</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Security &amp; trust</div><h2>Governed execution with a clear boundary.</h2></div>
+        <p class="section-copy">Isolated execution, governed review and deployment, private workloads, and a hard split between the public product surface and operational control on clawkraft.dev.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button secondary" href="/security/">Security &amp; trust</a>
+        <a class="button secondary" href="/docs/privacy/">Privacy</a>
+      </div>
     </div>
   </section>
 
@@ -284,9 +314,10 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
       <div class="eyebrow">Get started</div>
       <h2>Turn the infrastructure you already have into a workforce that can keep going.</h2>
       <div class="hero-actions">
-        <a class="button primary" href="https://setup.clawkraft.dev/">Commission an execution host</a>
+        <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+        <a class="button secondary" href="/get-started/">See the onboarding path</a>
         <a class="button secondary" href="/docs/">Connect an existing agent</a>
-        <a class="button secondary" href="https://app.clawkraft.dev/">Open Mission Control</a>
+        <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
       </div>
     </div>
   </div>
@@ -296,11 +327,17 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
   <div class="wrap footer-inner">
     <div>© ClawKraft</div>
     <div class="footer-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/get-started/">Get Started</a>
       <a href="/docs/">Docs</a>
       <a href="/status/">Status</a>
       <a href="/docs/privacy/">Privacy</a>
       <a href="/docs/terms/">Terms</a>
       <a href="/docs/support/">Support</a>
+      <a href="https://app.clawkraft.dev/">Login</a>
     </div>
   </div>
 </footer>

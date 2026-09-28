@@ -1,11 +1,76 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClawKraft Status</title>
-<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:0 auto;padding:48px 24px;background:#081014;color:#eef7f8}.ok{color:#86efac}.bad{color:#fca5a5}.card{border:1px solid #29414a;border-radius:14px;padding:20px;background:#0d171c}</style></head>
-<body><h1>ClawKraft Status</h1><div class="card"><h2 id="state">Checking…</h2><p id="detail">Public status exposes coarse service availability only.</p></div>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ClawKraft public service status.">
+<title>Status — ClawKraft</title>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.status-card{border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--panel);max-width:720px}
+.ok{color:#86efac}.bad{color:#fca5a5}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">CLAWKRAFT</a>
+    <div class="nav-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/" aria-current="page">Status</a>
+      <a class="button ghost nav-keep" href="https://app.clawkraft.dev/">Login</a>
+      <a class="button primary nav-keep" href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap page-hero">
+    <div class="breadcrumb"><a href="/">Home</a> / Status</div>
+    <div class="eyebrow">Status</div>
+    <h1>Public service status.</h1>
+    <p class="lede">Public status exposes coarse service availability only.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="https://setup.clawkraft.dev/signup">Get Started</a>
+      <a class="button secondary" href="https://app.clawkraft.dev/">Login</a>
+    </div>
+    <div class="status-card" style="margin-top:28px">
+      <h2 id="state" class="bad">Checking…</h2>
+      <p id="detail" class="section-copy">Public status exposes coarse service availability only.</p>
+    </div>
+    <p class="note">For authenticated operational status, use <a href="https://status.clawkraft.dev/" style="color:var(--accent)">status.clawkraft.dev</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© ClawKraft</div>
+    <div class="footer-links">
+      <a href="/product/">Product</a>
+      <a href="/how-it-works/">How it Works</a>
+      <a href="/use-cases/">Use Cases</a>
+      <a href="/security/">Security</a>
+      <a href="/docs/">Docs</a>
+      <a href="/status/">Status</a>
+      <a href="/docs/privacy/">Privacy</a>
+      <a href="/docs/terms/">Terms</a>
+      <a href="/docs/support/">Support</a>
+      <a href="https://app.clawkraft.dev/">Login</a>
+      <a href="https://setup.clawkraft.dev/signup">Get Started</a>
+    </div>
+  </div>
+</footer>
+
 <script>
 fetch('/api/status',{cache:'no-store'}).then(r=>r.json().then(j=>({ok:r.ok,j}))).then(({ok,j})=>{
  const s=document.getElementById('state'); const d=document.getElementById('detail');
  s.textContent=ok?'Operational':'Degraded'; s.className=ok?'ok':'bad';
  d.textContent=ok?'ClawKraft MCP is reachable.':'ClawKraft MCP health check did not pass.';
 }).catch(()=>{const s=document.getElementById('state');s.textContent='Degraded';s.className='bad';});
-</script></body></html>
+</script>
+</body>
+</html>

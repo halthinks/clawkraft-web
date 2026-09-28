@@ -1,0 +1,3446 @@
+{
+  "schema": "clawkraft/qualification-evidence/v1",
+  "work_id": "SURF-003",
+  "gate_id": "SURF-003-GATE",
+  "requirement_id": "SURF-003-EV-01",
+  "evidence_type": "qualification",
+  "qualification_profile": "product-surfaces",
+  "base_url": "http://127.0.0.1:8765",
+  "source_binding": {
+    "repository": "halthinks/clawkraft-web",
+    "ref": "main",
+    "base_sha": "6d0cd8610dbf48fc0003057dbb3070776c75fc69",
+    "binding_id": "SURF-003-SRC-1"
+  },
+  "work_packet_hash": "sha256:8b1be96df61a1522667b70fb174736c0a4fcc88460718e9e90bb2fb86b8312bc",
+  "generated_at": "2026-09-27T23:51:06.808Z",
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900,
+      "isMobile": false
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844,
+      "isMobile": true
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/",
+      "http_status": 200,
+      "title": "ClawKraft — Persistent, Governed Execution",
+      "screenshot": "output/qualification/SURF-003/home-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Open Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Connect an Agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Open Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Explore use cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Security & trust",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "See the onboarding path",
+          "href": "/get-started/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "path": "/product/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/product/",
+      "http_status": 200,
+      "title": "Product — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/product-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "See the onboarding path",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "path": "/how-it-works/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/how-it-works/",
+      "http_status": 200,
+      "title": "How it Works — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/how-it-works-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Onboarding path",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Connect an Agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "path": "/use-cases/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/use-cases/",
+      "http_status": 200,
+      "title": "Use Cases — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/use-cases-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "path": "/security/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/security/",
+      "http_status": 200,
+      "title": "Security & Trust — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/security-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Read the Privacy Policy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Support",
+          "href": "/docs/support/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "get-started",
+      "path": "/get-started/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/get-started/",
+      "http_status": 200,
+      "title": "Get Started — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/get-started-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Go to Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Go to Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Go to Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Go to Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Open Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Connect an Agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "docs",
+      "path": "/docs/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/docs/",
+      "http_status": 200,
+      "title": "Docs — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/docs-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Setup",
+          "href": "https://setup.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Setup",
+          "href": "https://setup.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "path": "/status/",
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:8765/status/",
+      "http_status": 200,
+      "title": "Status — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/status-desktop.png",
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "status.clawkraft.dev",
+          "href": "https://status.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "path": "/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/",
+      "http_status": 200,
+      "title": "ClawKraft — Persistent, Governed Execution",
+      "screenshot": "output/qualification/SURF-003/home-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Open Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Connect an Agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Open Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Explore use cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Security & trust",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "See the onboarding path",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Connect an existing agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "path": "/product/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/product/",
+      "http_status": 200,
+      "title": "Product — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/product-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "See the onboarding path",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "path": "/how-it-works/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/how-it-works/",
+      "http_status": 200,
+      "title": "How it Works — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/how-it-works-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Onboarding path",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Connect an Agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Terms",
+          "href": "/docs/terms/",
+          "visible": true
+        },
+        {
+          "text": "Support",
+          "href": "/docs/support/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "path": "/use-cases/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/use-cases/",
+      "http_status": 200,
+      "title": "Use Cases — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/use-cases-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Terms",
+          "href": "/docs/terms/",
+          "visible": true
+        },
+        {
+          "text": "Support",
+          "href": "/docs/support/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "path": "/security/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/security/",
+      "http_status": 200,
+      "title": "Security & Trust — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/security-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Read the Privacy Policy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Support",
+          "href": "/docs/support/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "get-started",
+      "path": "/get-started/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/get-started/",
+      "http_status": 200,
+      "title": "Get Started — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/get-started-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Go to Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Go to Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Go to Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Go to Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Open Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Connect an Agent",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "docs",
+      "path": "/docs/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/docs/",
+      "http_status": 200,
+      "title": "Docs — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/docs-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Setup",
+          "href": "https://setup.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "/get-started/",
+          "visible": true
+        },
+        {
+          "text": "Setup",
+          "href": "https://setup.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Mission Control",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Review",
+          "href": "https://review.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "https://status.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Terms",
+          "href": "/docs/terms/",
+          "visible": true
+        },
+        {
+          "text": "Support",
+          "href": "/docs/support/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "path": "/status/",
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:8765/status/",
+      "http_status": 200,
+      "title": "Status — ClawKraft",
+      "screenshot": "output/qualification/SURF-003/status-mobile.png",
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "get_started_links": [
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ],
+      "login_links": [
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        }
+      ],
+      "privileged_control_ids": [],
+      "nav_visible_links": [
+        {
+          "text": "CLAWKRAFT",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Home",
+          "href": "/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "status.clawkraft.dev",
+          "href": "https://status.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "/product/",
+          "visible": true
+        },
+        {
+          "text": "How it Works",
+          "href": "/how-it-works/",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "/use-cases/",
+          "visible": true
+        },
+        {
+          "text": "Security",
+          "href": "/security/",
+          "visible": true
+        },
+        {
+          "text": "Docs",
+          "href": "/docs/",
+          "visible": true
+        },
+        {
+          "text": "Status",
+          "href": "/status/",
+          "visible": true
+        },
+        {
+          "text": "Privacy",
+          "href": "/docs/privacy/",
+          "visible": true
+        },
+        {
+          "text": "Terms",
+          "href": "/docs/terms/",
+          "visible": true
+        },
+        {
+          "text": "Support",
+          "href": "/docs/support/",
+          "visible": true
+        },
+        {
+          "text": "Login",
+          "href": "https://app.clawkraft.dev/",
+          "visible": true
+        },
+        {
+          "text": "Get Started",
+          "href": "https://setup.clawkraft.dev/signup",
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "routing": {
+    "get_started": [
+      {
+        "page": "home",
+        "viewport": "desktop",
+        "count": 3,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "product",
+        "viewport": "desktop",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "how-it-works",
+        "viewport": "desktop",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "use-cases",
+        "viewport": "desktop",
+        "count": 4,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "security",
+        "viewport": "desktop",
+        "count": 4,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "get-started",
+        "viewport": "desktop",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "docs",
+        "viewport": "desktop",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup",
+          "https://setup.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "status",
+        "viewport": "desktop",
+        "count": 3,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "home",
+        "viewport": "mobile",
+        "count": 3,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "product",
+        "viewport": "mobile",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "how-it-works",
+        "viewport": "mobile",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "use-cases",
+        "viewport": "mobile",
+        "count": 4,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "security",
+        "viewport": "mobile",
+        "count": 4,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "get-started",
+        "viewport": "mobile",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      },
+      {
+        "page": "docs",
+        "viewport": "mobile",
+        "count": 5,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup",
+          "https://setup.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "status",
+        "viewport": "mobile",
+        "count": 3,
+        "hrefs": [
+          "https://setup.clawkraft.dev/signup"
+        ]
+      }
+    ],
+    "login": [
+      {
+        "page": "home",
+        "viewport": "desktop",
+        "count": 6,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "product",
+        "viewport": "desktop",
+        "count": 4,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "how-it-works",
+        "viewport": "desktop",
+        "count": 2,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "use-cases",
+        "viewport": "desktop",
+        "count": 3,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "security",
+        "viewport": "desktop",
+        "count": 4,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "get-started",
+        "viewport": "desktop",
+        "count": 5,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "docs",
+        "viewport": "desktop",
+        "count": 5,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "status",
+        "viewport": "desktop",
+        "count": 3,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "home",
+        "viewport": "mobile",
+        "count": 6,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "product",
+        "viewport": "mobile",
+        "count": 4,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "how-it-works",
+        "viewport": "mobile",
+        "count": 2,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "use-cases",
+        "viewport": "mobile",
+        "count": 3,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "security",
+        "viewport": "mobile",
+        "count": 4,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "get-started",
+        "viewport": "mobile",
+        "count": 5,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "docs",
+        "viewport": "mobile",
+        "count": 5,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      },
+      {
+        "page": "status",
+        "viewport": "mobile",
+        "count": 3,
+        "hrefs": [
+          "https://app.clawkraft.dev/"
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "http-home-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "home",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-home-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "home",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-home-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "home",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-home-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "home",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-home-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "home",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-product-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "product",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-product-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "product",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-product-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "product",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-product-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "product",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-product-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "product",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-how-it-works-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "how-it-works",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-how-it-works-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "how-it-works",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-how-it-works-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "how-it-works",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-how-it-works-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "how-it-works",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-how-it-works-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "how-it-works",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-use-cases-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "use-cases",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-use-cases-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "use-cases",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-use-cases-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "use-cases",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-use-cases-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "use-cases",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-use-cases-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "use-cases",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-security-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "security",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-security-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "security",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-security-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "security",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-security-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "security",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-security-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "security",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-get-started-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "get-started",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-get-started-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "get-started",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-get-started-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "get-started",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-get-started-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "get-started",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-get-started-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "get-started",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-docs-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "docs",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-docs-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "docs",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-docs-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup, https://setup.clawkraft.dev/",
+      "page": "docs",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-docs-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "docs",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-docs-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "docs",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-status-desktop",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "status",
+      "viewport": "desktop"
+    },
+    {
+      "id": "responsive-status-desktop",
+      "status": "PASS",
+      "detail": "no horizontal overflow (1440px)",
+      "page": "status",
+      "viewport": "desktop"
+    },
+    {
+      "id": "get-started-status-desktop",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "status",
+      "viewport": "desktop"
+    },
+    {
+      "id": "login-status-desktop",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "status",
+      "viewport": "desktop"
+    },
+    {
+      "id": "privileged-status-desktop",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "status",
+      "viewport": "desktop"
+    },
+    {
+      "id": "http-home-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "home",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-home-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "home",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-home-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "home",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-home-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "home",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-home-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "home",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-product-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "product",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-product-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "product",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-product-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "product",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-product-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "product",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-product-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "product",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-how-it-works-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "how-it-works",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-how-it-works-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "how-it-works",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-how-it-works-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "how-it-works",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-how-it-works-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "how-it-works",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-how-it-works-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "how-it-works",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-use-cases-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "use-cases",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-use-cases-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "use-cases",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-use-cases-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "use-cases",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-use-cases-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "use-cases",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-use-cases-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "use-cases",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-security-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "security",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-security-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "security",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-security-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "security",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-security-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "security",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-security-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "security",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-get-started-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "get-started",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-get-started-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "get-started",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-get-started-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "get-started",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-get-started-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "get-started",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-get-started-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "get-started",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-docs-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "docs",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-docs-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "docs",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-docs-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup, https://setup.clawkraft.dev/",
+      "page": "docs",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-docs-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "docs",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-docs-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "docs",
+      "viewport": "mobile"
+    },
+    {
+      "id": "http-status-mobile",
+      "status": "PASS",
+      "detail": "HTTP 200",
+      "page": "status",
+      "viewport": "mobile"
+    },
+    {
+      "id": "responsive-status-mobile",
+      "status": "PASS",
+      "detail": "no horizontal overflow (390px)",
+      "page": "status",
+      "viewport": "mobile"
+    },
+    {
+      "id": "get-started-status-mobile",
+      "status": "PASS",
+      "detail": "Get Started links: https://setup.clawkraft.dev/signup",
+      "page": "status",
+      "viewport": "mobile"
+    },
+    {
+      "id": "login-status-mobile",
+      "status": "PASS",
+      "detail": "Login links: https://app.clawkraft.dev/",
+      "page": "status",
+      "viewport": "mobile"
+    },
+    {
+      "id": "privileged-status-mobile",
+      "status": "PASS",
+      "detail": "no privileged control element ids",
+      "page": "status",
+      "viewport": "mobile"
+    }
+  ],
+  "outcome": "PASS",
+  "summary": {
+    "outcome": "PASS",
+    "generated_at": "2026-09-27T23:51:06.808Z",
+    "pages_captured": 16,
+    "screenshots": [
+      "output/qualification/SURF-003/home-desktop.png",
+      "output/qualification/SURF-003/product-desktop.png",
+      "output/qualification/SURF-003/how-it-works-desktop.png",
+      "output/qualification/SURF-003/use-cases-desktop.png",
+      "output/qualification/SURF-003/security-desktop.png",
+      "output/qualification/SURF-003/get-started-desktop.png",
+      "output/qualification/SURF-003/docs-desktop.png",
+      "output/qualification/SURF-003/status-desktop.png",
+      "output/qualification/SURF-003/home-mobile.png",
+      "output/qualification/SURF-003/product-mobile.png",
+      "output/qualification/SURF-003/how-it-works-mobile.png",
+      "output/qualification/SURF-003/use-cases-mobile.png",
+      "output/qualification/SURF-003/security-mobile.png",
+      "output/qualification/SURF-003/get-started-mobile.png",
+      "output/qualification/SURF-003/docs-mobile.png",
+      "output/qualification/SURF-003/status-mobile.png"
+    ],
+    "checks_total": 80,
+    "checks_failed": 0,
+    "get_started_destinations": [
+      "https://setup.clawkraft.dev/signup",
+      "https://setup.clawkraft.dev/"
+    ],
+    "login_destinations": [
+      "https://app.clawkraft.dev/"
+    ]
+  }
+}
