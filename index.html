@@ -37,8 +37,8 @@ nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);
 .early-access-button{appearance:none;border:1px solid rgba(182,240,156,.58);background:linear-gradient(180deg,rgba(18,42,35,.96),rgba(10,27,24,.96));color:#eaffdf;min-height:50px;padding:0 24px;border-radius:12px;font:900 13px/1 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.28),0 0 24px rgba(182,240,156,.07);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .early-access-button:hover,.early-access-button:focus-visible{transform:translateY(-1px);border-color:#b6f09c;box-shadow:0 14px 40px rgba(0,0,0,.34),0 0 28px rgba(182,240,156,.14);outline:none}
 .waitlist-modal[hidden]{display:none}
-.waitlist-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:rgba(2,7,10,.82);backdrop-filter:blur(12px)}
-.waitlist-card{width:min(92vw,520px);background:#091419;border:1px solid rgba(125,211,252,.26);box-shadow:0 24px 80px rgba(0,0,0,.56),0 0 44px rgba(125,211,252,.06);border-radius:18px;padding:28px;color:var(--text)}
+.waitlist-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:rgba(2,7,10,.82);backdrop-filter:blur(12px);overflow-y:auto;overscroll-behavior:contain}
+.waitlist-card{width:min(92vw,520px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:#091419;border:1px solid rgba(125,211,252,.26);box-shadow:0 24px 80px rgba(0,0,0,.56),0 0 44px rgba(125,211,252,.06);border-radius:18px;padding:28px;color:var(--text)}
 .waitlist-card h2{margin:0 0 8px;font-size:28px;letter-spacing:-.025em}
 .waitlist-card p{margin:0 0 20px;color:var(--muted);line-height:1.55}
 .waitlist-card label{display:block;margin:14px 0 6px;font-size:13px;color:#bfd0d5}
@@ -96,6 +96,12 @@ h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.035em;line-height:1.05;margin
 .use-card{min-height:190px}
 .use-card .use-label{display:inline-block;margin-bottom:14px;font:800 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;color:var(--accent)}
 .callout{margin-top:18px;padding:18px 20px;border-left:3px solid var(--accent2);background:rgba(182,240,156,.045);color:#cfe0e4;line-height:1.65}
+.onboarding-flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;counter-reset:onboard}
+.onboarding-step{position:relative;min-height:170px;padding:20px 18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--panel),#0c171c)}
+.onboarding-step:before{counter-increment:onboard;content:"0" counter(onboard);display:block;margin-bottom:22px;font:900 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:var(--accent2)}
+.onboarding-step:not(:last-child):after{content:"→";position:absolute;right:-17px;top:50%;z-index:2;transform:translateY(-50%);width:22px;text-align:center;color:#6f8a93;font-weight:900}
+.onboarding-step b{display:block;margin-bottom:8px;font-size:16px}
+.onboarding-step span{display:block;color:var(--muted);font-size:13.5px;line-height:1.5}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .step{border:1px solid var(--line);border-radius:14px;padding:18px;background:rgba(15,29,35,.72)}
 .step b{display:block;margin-bottom:7px}.step span{color:var(--muted);font-size:14px;line-height:1.5}
@@ -112,8 +118,8 @@ h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.035em;line-height:1.05;margin
 footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap}
-@media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}.capability-grid{grid-template-columns:1fr 1fr}.product-shots{grid-template-columns:1fr}.use-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow,.capability-grid,.use-grid{grid-template-columns:1fr}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}.comparison th,.comparison td{padding:14px}}
+@media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}.capability-grid{grid-template-columns:1fr 1fr}.product-shots{grid-template-columns:1fr}.use-grid{grid-template-columns:1fr 1fr}.onboarding-flow{grid-template-columns:repeat(3,1fr)}.onboarding-step:nth-child(3):after{display:none}}
+@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow,.capability-grid,.use-grid,.onboarding-flow{grid-template-columns:1fr}.onboarding-step{min-height:auto}.onboarding-step:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-19px;transform:translateX(-50%);background:#081217}.waitlist-modal{place-items:start center;padding:12px}.waitlist-card{width:min(100%,520px);max-height:calc(100dvh - 24px);padding:22px 18px;margin:auto}.waitlist-actions{position:sticky;bottom:-1px;padding:12px 0 4px;background:linear-gradient(180deg,rgba(9,20,25,0),#091419 28%);z-index:2}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}.comparison th,.comparison td{padding:14px}}
 </style>
 </head>
 <body>
@@ -205,6 +211,27 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
           <img src="/assets/mission-control-overview.svg" alt="ClawKraft Mission Control product view with program progress, worker controls, work graph, decisions, and audit state" loading="lazy">
           <figcaption class="product-shot-copy"><h3>Mission Control</h3><p>Program progress, next transitions, worker/provider state, autonomy, blocking decisions, cost, authority, and audit history in one operational view.</p></figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="onboarding-flow">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Onboarding flow</div><h2>From account to first governed delivery.</h2></div>
+        <p class="section-copy">ClawKraft onboarding is a progression into an operating workforce, not a terminal setup checklist. Each step establishes durable state the next step can reuse.</p>
+      </div>
+      <div class="onboarding-flow" aria-label="ClawKraft onboarding flow">
+        <div class="onboarding-step"><b>Create account</b><span>Enter the authenticated setup surface and establish the customer/project boundary.</span></div>
+        <div class="onboarding-step"><b>Connect control plane</b><span>Connect the backend foundation and credential broker without distributing raw long-lived secrets.</span></div>
+        <div class="onboarding-step"><b>Commission compute</b><span>Qualify a VPS, workstation, VM host, sandbox capacity, storage, network and disposable CI resources.</span></div>
+        <div class="onboarding-step"><b>Connect workforce</b><span>Attach compatible AI workers and providers, qualify them, and keep assignment ON/OFF independently controllable.</span></div>
+        <div class="onboarding-step"><b>Select project + Program</b><span>Load durable project state and proven execution Programs so a fresh worker starts from authority, not chat memory.</span></div>
+        <div class="onboarding-step"><b>Build + verify</b><span>Execute, checkpoint, review, correct, prove, merge, deploy and keep project truth synchronized as work finishes.</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="https://setup.clawkraft.dev/signup">Start onboarding</a>
+        <a class="button secondary" href="/get-started/">See setup details</a>
       </div>
     </div>
   </section>
