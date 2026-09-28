@@ -15,7 +15,7 @@
         [
           "python3",
           "-c",
-          "from pathlib import Path; s=Path('index.html').read_text(); assert 'Join Early Access Waitlist' in s; assert '/docs/privacy/' in s; assert Path('assets/clawkraft-header-v2.webp').is_file(); assert Path('assets/site.css').is_file(); assert Path('docs/privacy/index.html').is_file(); assert Path('docs/IA.md').is_file(); print('clawkraft-web static qualification: PASS')"
+          "from pathlib import Path; s=Path('index.html').read_text(); assert 'Join Early Access Waitlist' in s; assert '/docs/privacy/' in s; assert Path('assets/clawkraft-header-v2.webp').is_file(); assert Path('assets/site.css').is_file(); assert Path('docs/privacy/index.html').is_file(); privacy=Path('docs/privacy/index.html').read_text(); assert 'privacy@clawkraft.com' in privacy; assert 'clawkraft@gmail.com' not in privacy; assert Path('docs/IA.md').is_file(); print('clawkraft-web static qualification: PASS')"
         ]
       ]
     },
