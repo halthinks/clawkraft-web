@@ -79,7 +79,7 @@ No privileged controls are operable from public chrome. Pause/resume/stop, worke
 7. **Positioning comparison** — explain where ClawKraft overlaps with compute/sandbox platforms and where the durable execution/control-plane scope extends further.
 8. **Bring your own infrastructure** — commission path (summary; deep-dive on `/how-it-works/`).
 9. **Use-case display** — concrete work shapes and operational outcomes (deep-dive on `/use-cases/`).
-10. **Security & trust teaser** — governance/isolation posture (summary; deep-dive on `/security/`).
+10. **Onboarding flow** — account → control plane → compute → workforce → project + Program → governed build/verify.\n11. **Security & trust teaser** — governance/isolation posture (summary; deep-dive on `/security/`).
 11. **Governed delivery** — execute → review → evidence → deliver.
 12. **Architecture boundary** — `.com` explains; `.dev` operates; control plane is authoritative.
 13. **Final CTA** — Get Started, Docs, Login.
@@ -130,3 +130,7 @@ Qualification evidence covers desktop and mobile screenshots plus link-target ve
 - Program/task state, private inventories, credentials, provider secrets;
 - Operator runbooks or internal evidence;
 - Customer deployment hostnames as product constants.
+
+### Waitlist modal behavior
+
+The homepage early-access dialog is viewport-bounded and independently scrollable. On small screens its action row remains reachable/sticky so privacy text and consent never push Cancel/Join Waitlist below an inaccessible viewport boundary.
