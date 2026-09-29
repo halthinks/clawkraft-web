@@ -54,6 +54,24 @@
           "from pathlib import Path\nforbidden_ids=['hardstop','enableall','disableall','workertoggle','authorityenvelope','pauseprogram','resumeprogram']\nfor p in Path('.').rglob('*.html'):\n    if any(part.startswith('.') for part in p.parts):\n        continue\n    t=p.read_text().lower()\n    for fid in forbidden_ids:\n        assert f'id=\"{fid}' not in t, f'{p} contains privileged control marker {fid}'\nidx=Path('index.html').read_text()\nassert 'href=\"https://setup.clawkraft.dev/signup\"' in idx\nassert 'href=\"https://app.clawkraft.dev/\"' in idx\nprint('clawkraft-web boundary qualification: PASS')"
         ]
       ]
+    },
+    {
+      "id": "intent-contract",
+      "title": "Validate signed public-to-setup initiation intent contract",
+      "required": true,
+      "timeout_seconds": 300,
+      "network": false,
+      "capabilities": [
+        "runtime.python"
+      ],
+      "artifacts": [],
+      "commands": [
+        [
+          "python3",
+          "-c",
+          "from pathlib import Path\nimport sys\n# Schema and helper must exist.\nassert Path('schemas/first-run-initiation-intent.schema.json').is_file()\nassert Path('assets/intent-contract.js').is_file()\n# Helper is referenced from the index page.\nidx = Path('index.html').read_text()\nassert '/assets/intent-contract.js' in idx\n# Index page must expose at least one intent-cta wired through the helper.\nassert 'intent-cta' in idx\n# Schema must require every critical claim.\nschema = __import__('json').loads(Path('schemas/first-run-initiation-intent.schema.json').read_text())\nrequired_payload = set(schema['properties']['payload']['required'])\nfor claim in ('iss','aud','sub','iat','nbf','exp','jti','purpose','surface'):\n    assert claim in required_payload, f'schema missing required claim {claim}'\n# Run the contract tests; non-zero exit fails the job.\nrc = __import__('subprocess').call([sys.executable, 'tests/intent-contract-tests.py'])\nassert rc == 0, f'intent-contract-tests exited {rc}'\nprint('clawkraft-web intent-contract qualification: PASS')"
+        ]
+      ]
     }
   ]
 }

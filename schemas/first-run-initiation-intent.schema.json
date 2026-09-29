@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clawkraft.com/schemas/first-run-initiation-intent.schema.json",
+  "title": "ClawKraft First-Run Initiation Intent",
+  "description": "Compact JWS payload schema for the signed one-time initiation intent issued from clawkraft.com to setup.clawkraft.dev. The intent is single-use, short-lived, and bound to the expected setup destination. It must NEVER carry a credential, session secret, API key, password, or any value that would grant access to a privileged surface on its own.",
+  "type": "object",
+  "required": ["header", "payload", "signature"],
+  "additionalProperties": false,
+  "properties": {
+    "header": {
+      "type": "object",
+      "description": "JOSE header. alg MUST be a registered asymmetric or symmetric algorithm acceptable to the setup verifier. typ fixes the contract version.",
+      "required": ["alg", "typ", "kid"],
+      "additionalProperties": false,
+      "properties": {
+        "alg": {
+          "type": "string",
+          "enum": ["HS256", "HS384", "HS512", "ES256", "ES384", "EdDSA", "RS256", "RS384", "RS512"],
+          "description": "JWS signing algorithm. Setup MUST refuse any alg not in this list to avoid algorithm-confusion attacks."
+        },
+        "typ": {
+          "type": "string",
+          "const": "ck-intent+v1",
+          "description": "Fixed media type identifier for the first-run initiation intent contract. Setup MUST refuse any other typ."
+        },
+        "kid": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$",
+          "description": "Key identifier for the signing key. Setup MUST resolve this against its trusted key set; unknown kids MUST fail closed.",
+          "examples": ["ck-intent-2026q3"]
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "description": "JWT-style payload with the intent claims. iss, aud, exp, nbf, iat, jti, purpose, surface are mandatory. ref is the public-side correlation reference.",
+      "required": ["iss", "aud", "sub", "iat", "nbf", "exp", "jti", "purpose", "surface"],
+      "additionalProperties": false,
+      "properties": {
+        "iss": {
+          "type": "string",
+          "const": "clawkraft.com",
+          "description": "Issuer. Fixed to clawkraft.com. Setup MUST refuse any other iss to prevent intents issued by other surfaces from being honored."
+        },
+        "aud": {
+          "type": "string",
+          "const": "setup.clawkraft.dev",
+          "description": "Audience. Fixed to setup.clawkraft.dev. Setup MUST refuse any other aud (including app.clawkraft.dev, mcp.clawkraft.dev, or an external host)."
+        },
+        "sub": {
+          "type": "string",
+          "enum": ["anonymous"],
+          "description": "Subject. The intent is anonymous by design — it identifies a public-initiation request, not an authenticated user. No user identifier, email, or account reference belongs in this claim."
+        },
+        "iat": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Issued-at, seconds since epoch."
+        },
+        "nbf": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Not-before, seconds since epoch. Must satisfy nbf <= iat <= now."
+        },
+        "exp": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Expiry, seconds since epoch. Must satisfy exp - iat <= 900 (15 minutes). Setup MUST refuse expired or not-yet-valid tokens."
+        },
+        "jti": {
+          "type": "string",
+          "pattern": "^[0-9a-z]{16,64}$",
+          "description": "Single-use token identifier. Setup MUST record consumed jti values and refuse reuse within the exp window. The pattern enforces a non-guessable identifier so that an attacker cannot replay a guessed id."
+        },
+        "purpose": {
+          "type": "string",
+          "const": "first-run:initiation",
+          "description": "Fixed purpose identifier. Setup MUST refuse any other purpose to keep this contract scoped to public-initiation only."
+        },
+        "surface": {
+          "type": "string",
+          "enum": [
+            "get-started",
+            "landing-primary",
+            "landing-secondary",
+            "how-it-works",
+            "product",
+            "docs",
+            "use-cases",
+            "security"
+          ],
+          "description": "Surface on clawkraft.com that originated the request. Used for telemetry and rate limiting. Setup MUST accept only the values in this enum."
+        },
+        "ref": {
+          "type": "string",
+          "pattern": "^[0-9a-z]{8,32}$",
+          "description": "Public-side correlation reference. NOT a credential. Setup MAY log this for audit but MUST NOT treat it as authorization."
+        }
+      }
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "description": "JWS signature segment. base64url-encoded."
+    }
+  },
+  "forbiddenPayloadFields": [
+    "api_key",
+    "apikey",
+    "api-key",
+    "password",
+    "secret",
+    "token",
+    "session",
+    "cookie",
+    "authorization",
+    "bearer",
+    "private_key",
+    "client_secret",
+    "access_token",
+    "refresh_token",
+    "id_token",
+    "credential",
+    "credentials",
+    "passphrase"
+  ],
+  "contractRules": {
+    "singleUse": "Setup MUST persist consumed jti values (with the matching exp) for at least the duration of exp and refuse any token whose jti has already been consumed. Storage MUST be tamper-evident.",
+    "expiry": "exp - iat MUST be <= 900 seconds (15 minutes). Setup MUST refuse tokens with exp - iat > 900. Setup MUST refuse tokens where now >= exp or now < nbf.",
+    "destinationBinding": "Setup MUST verify aud == setup.clawkraft.dev. Setup MUST refuse tokens intended for any other audience, including but not limited to app.clawkraft.dev, mcp.clawkraft.dev, or any external host.",
+    "issuerBinding": "Setup MUST verify iss == clawkraft.com. Setup MUST refuse tokens issued by any other party.",
+    "openRedirect": "Setup MUST redirect only to a fixed allowlist of internal post-initiation destinations (setup.clawkraft.dev/*) and MUST refuse any intent whose downstream step tries to point the browser to an off-allowlist host.",
+    "credentialExclusion": "The intent payload MUST NOT contain any field listed in forbiddenPayloadFields, nor any field whose name contains 'key', 'pass', 'secret', 'token', 'session', 'auth' (case-insensitive) that is not part of the explicit allowlist above. Setup MUST refuse such tokens fail-closed.",
+    "noBrowserStorage": "The clawkraft.com page MUST NOT persist the intent token to localStorage, sessionStorage, IndexedDB, cookies, or any other browser-side store. The token MUST only exist in the URL query string of the redirect target.",
+    "noCredentialInUrl": "No secret, password, API key, bearer token, or session identifier MUST ever appear in any URL on clawkraft.com or in any redirect from clawkraft.com to setup.clawkraft.dev. The intent token is an authorization assertion, not a credential."
+  }
+}
