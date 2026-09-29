@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Get started with ClawKraft: commission an execution host, attach workers, and begin governed onboarding at setup.clawkraft.dev.">
+<meta name="description" content="Get started with ClawKraft: commission an execution host, attach workers, and begin governed onboarding at setup.clawkraft.dev via a signed, single-use, expiring initiation intent.">
 <title>Get Started — ClawKraft</title>
 <link rel="stylesheet" href="/assets/site.css">
+<script defer src="/get-started/initiation.js"></script>
 </head>
 <body>
 <nav>
@@ -80,6 +81,38 @@
         <div class="step"><b>2. setup.clawkraft.dev</b><span>Commission and qualify an execution host. Begin at <b>Get Started</b>.</span></div>
         <div class="step"><b>3. app.clawkraft.dev</b><span>Operate programs and workforce in Mission Control. Existing users use <b>Login</b>.</span></div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Initiation contract</div><h2>What the Get Started button actually sends.</h2></div>
+        <p class="section-copy">When you click <b>Get Started</b>, this page issues a short-lived, one-time, signed <i>initiation intent</i> and POSTs it to <code>https://setup.clawkraft.dev/initiate</code>. The intent is bound to <code>https://setup.clawkraft.dev/signup</code> and expires within five minutes. Setup signs the envelope, marks its <code>jti</code> single-use, and 303-redirects you to signup. The envelope carries no credential, email, identifier, or contact value.</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <div class="kicker">What the public site sends</div>
+          <h3>Bound, expiring, one-time</h3>
+          <p><code>schema</code>, <code>iss=clawkraft.com</code>, <code>aud=https://setup.clawkraft.dev/signup</code>, <code>iat</code>, <code>exp = iat + 300</code>, <code>jti</code> (CSPRNG), <code>intent_type=signup_initiation</code>, <code>source_surface</code>, <code>destination</code>, <code>consent_version=v1</code>.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">What Setup does on receipt</div>
+          <h3>Sign, consume, redirect</h3>
+          <p>Setup validates the envelope against the published schema, signs it with its private key, marks the <code>jti</code> consumed, sets a Secure / HttpOnly / SameSite=Strict cookie, and returns <code>303 See Other</code> to <code>https://setup.clawkraft.dev/signup</code>.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">What fails closed</div>
+          <h3>Replay, tamper, expiry, wrong destination, open redirect</h3>
+          <p>Setup rejects replays (jti already consumed), tampering (signature mismatch), expired intents (<code>exp</code> ≤ now), wrong audience (anything other than <code>https://setup.clawkraft.dev/signup</code>), and open redirects (Setup will only redirect to paths on <code>setup.clawkraft.dev</code>; it never forwards <code>return_path</code> values that contain a host or scheme).</p>
+        </article>
+        <article class="card">
+          <div class="kicker">What stays off the public surface</div>
+          <h3>No credential, no secret, no value</h3>
+          <p>The envelope schema rejects <code>email</code>, <code>password</code>, <code>token</code>, <code>api_key</code>, <code>secret</code>, <code>credential</code>, <code>authorization</code>, <code>cookie</code>, and <code>session</code> fields. The public site never receives, stores, or forwards a credential.</p>
+        </article>
+      </div>
+      <p class="note">Schema, source, and conformance tests: <a href="/schemas/initiation-intent.v1.json" style="color:var(--accent)">/schemas/initiation-intent.v1.json</a> · <a href="/docs/initiation-contract.md" style="color:var(--accent)">/docs/initiation-contract.md</a> · <a href="/tests/test_initiation_contract.py" style="color:var(--accent)">/tests/test_initiation_contract.py</a></p>
     </div>
   </section>
 
