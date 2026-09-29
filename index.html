@@ -37,8 +37,9 @@ nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(34,56,64,.75);
 .early-access-button{appearance:none;border:1px solid rgba(182,240,156,.58);background:linear-gradient(180deg,rgba(18,42,35,.96),rgba(10,27,24,.96));color:#eaffdf;min-height:50px;padding:0 24px;border-radius:12px;font:900 13px/1 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.28),0 0 24px rgba(182,240,156,.07);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .early-access-button:hover,.early-access-button:focus-visible{transform:translateY(-1px);border-color:#b6f09c;box-shadow:0 14px 40px rgba(0,0,0,.34),0 0 28px rgba(182,240,156,.14);outline:none}
 .waitlist-modal[hidden]{display:none}
-.waitlist-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:rgba(2,7,10,.82);backdrop-filter:blur(12px);overflow-y:auto;overscroll-behavior:contain}
-.waitlist-card{width:min(92vw,520px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:#091419;border:1px solid rgba(125,211,252,.26);box-shadow:0 24px 80px rgba(0,0,0,.56),0 0 44px rgba(125,211,252,.06);border-radius:18px;padding:28px;color:var(--text)}
+.waitlist-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;height:var(--waitlist-vh,100dvh);max-height:var(--waitlist-vh,100dvh);padding:16px;background:rgba(2,7,10,.82);backdrop-filter:blur(12px);overflow:hidden;overscroll-behavior:contain}
+.waitlist-card{width:min(92vw,520px);max-height:calc(var(--waitlist-vh,100dvh) - 32px);display:flex;flex-direction:column;overflow:hidden;background:#091419;border:1px solid rgba(125,211,252,.26);box-shadow:0 24px 80px rgba(0,0,0,.56),0 0 44px rgba(125,211,252,.06);border-radius:18px;padding:28px;color:var(--text);min-height:0}
+.waitlist-scroll{min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-gutter:stable;padding-right:2px}
 .waitlist-card h2{margin:0 0 8px;font-size:28px;letter-spacing:-.025em}
 .waitlist-card p{margin:0 0 20px;color:var(--muted);line-height:1.55}
 .waitlist-card label{display:block;margin:14px 0 6px;font-size:13px;color:#bfd0d5}
@@ -119,7 +120,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);f
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap}
 @media(max-width:900px){.hero,.section-head,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.terminal{order:-1}.capability-grid{grid-template-columns:1fr 1fr}.product-shots{grid-template-columns:1fr}.use-grid{grid-template-columns:1fr 1fr}.onboarding-flow{grid-template-columns:repeat(3,1fr)}.onboarding-step:nth-child(3):after{display:none}}
-@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow,.capability-grid,.use-grid,.onboarding-flow{grid-template-columns:1fr}.onboarding-step{min-height:auto}.onboarding-step:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-19px;transform:translateX(-50%);background:#081217}.waitlist-modal{place-items:start center;padding:12px}.waitlist-card{width:min(100%,520px);max-height:calc(100dvh - 24px);padding:22px 18px;margin:auto}.waitlist-actions{position:sticky;bottom:-1px;padding:12px 0 4px;background:linear-gradient(180deg,rgba(9,20,25,0),#091419 28%);z-index:2}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}.comparison th,.comparison td{padding:14px}}
+@media(max-width:620px){.nav-links a:not(.button){display:none}.nav-links .nav-keep{display:inline-flex}.hero{padding-top:54px}.grid,.flow,.capability-grid,.use-grid,.onboarding-flow{grid-template-columns:1fr}.onboarding-step{min-height:auto}.onboarding-step:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-19px;transform:translateX(-50%);background:#081217}.waitlist-modal{place-items:center;padding:8px max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}.waitlist-card{width:100%;max-height:calc(var(--waitlist-vh,100dvh) - max(16px,env(safe-area-inset-bottom)));padding:18px 14px 0;margin:0;border-radius:16px}.waitlist-card h2{font-size:26px}.waitlist-scroll{padding:0 4px max(8px,env(safe-area-inset-bottom)) 0}.waitlist-actions{position:sticky;bottom:0;padding:14px 0 max(10px,env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(9,20,25,0),#091419 24%);z-index:4}.waitlist-actions button{min-height:46px;flex:1}.cta-box{padding:26px}.wrap{width:min(100% - 22px,var(--max))}.comparison th,.comparison td{padding:14px}}
 </style>
 </head>
 <body>
@@ -466,24 +467,26 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
   <div class="waitlist-card" role="dialog" aria-modal="true" aria-labelledby="waitlistTitle">
     <button class="waitlist-close" id="waitlistClose" type="button" aria-label="Close">×</button>
     <h2 id="waitlistTitle">Join Early Access</h2>
-    <p>Join the ClawKraft early access waitlist. We’ll let you know when access opens.</p>
-    <form id="waitlistForm" novalidate>
-      <label for="waitlistName">Name <span aria-hidden="true">(optional)</span></label>
-      <input id="waitlistName" name="name" maxlength="80" autocomplete="name">
-      <label for="waitlistEmail">Email</label>
-      <input id="waitlistEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
-      <div class="waitlist-hp" aria-hidden="true">
-        <label for="waitlistWebsite">Website</label>
-        <input id="waitlistWebsite" name="website" tabindex="-1" autocomplete="off">
-      </div>
-      <p class="waitlist-privacy">We use your name and email only to manage early access, contact you about availability, and operate and secure ClawKraft. We do not sell your personal information or share it for advertising. <a href="/docs/privacy/" target="_blank" rel="noopener">Read the Privacy Policy</a>.</p>
-      <label class="waitlist-consent" for="waitlistPrivacyAck"><input id="waitlistPrivacyAck" name="privacy_ack" type="checkbox" required><span>I agree that ClawKraft may store my name and email and contact me about early access as described above.</span></label>
-      <div class="waitlist-actions">
-        <button class="waitlist-cancel" id="waitlistCancel" type="button">Cancel</button>
-        <button class="waitlist-submit" id="waitlistSubmit" type="submit">Join Waitlist</button>
-      </div>
-      <div class="waitlist-status" id="waitlistStatus" role="status" aria-live="polite"></div>
-    </form>
+    <div class="waitlist-scroll" id="waitlistScroll">
+      <p>Join the ClawKraft early access waitlist. We’ll let you know when access opens.</p>
+      <form id="waitlistForm" novalidate>
+        <label for="waitlistName">Name <span aria-hidden="true">(optional)</span></label>
+        <input id="waitlistName" name="name" maxlength="80" autocomplete="name">
+        <label for="waitlistEmail">Email</label>
+        <input id="waitlistEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+        <div class="waitlist-hp" aria-hidden="true">
+          <label for="waitlistWebsite">Website</label>
+          <input id="waitlistWebsite" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="waitlist-privacy">We use your name and email only to manage early access, contact you about availability, and operate and secure ClawKraft. We do not sell your personal information or share it for advertising. <a href="/docs/privacy/" target="_blank" rel="noopener">Read the Privacy Policy</a>.</p>
+        <label class="waitlist-consent" for="waitlistPrivacyAck"><input id="waitlistPrivacyAck" name="privacy_ack" type="checkbox" required><span>I agree that ClawKraft may store my name and email and contact me about early access as described above.</span></label>
+        <div class="waitlist-actions">
+          <button class="waitlist-cancel" id="waitlistCancel" type="button">Cancel</button>
+          <button class="waitlist-submit" id="waitlistSubmit" type="submit">Join Waitlist</button>
+        </div>
+        <div class="waitlist-status" id="waitlistStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
   </div>
 </div>
 
@@ -498,17 +501,34 @@ External agents: https://mcp.clawkraft.dev/mcp</div>
   const privacyAck = document.getElementById('waitlistPrivacyAck');
   const status = document.getElementById('waitlistStatus');
   const submit = document.getElementById('waitlistSubmit');
+  const scroll = document.getElementById('waitlistScroll');
+  let previousBodyOverflow = '';
+
+  function syncWaitlistViewport() {
+    const visibleHeight = window.visualViewport?.height || window.innerHeight;
+    document.documentElement.style.setProperty('--waitlist-vh', Math.max(320, Math.floor(visibleHeight)) + 'px');
+  }
 
   function openWaitlist() {
+    syncWaitlistViewport();
+    previousBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     status.textContent = '';
-    requestAnimationFrame(() => email.focus());
+    scroll.scrollTop = 0;
+    requestAnimationFrame(() => email.focus({preventScroll:true}));
   }
   function closeWaitlist() {
     modal.hidden = true;
     modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = previousBodyOverflow;
   }
+
+  syncWaitlistViewport();
+  window.addEventListener('resize', syncWaitlistViewport, {passive:true});
+  window.visualViewport?.addEventListener('resize', syncWaitlistViewport, {passive:true});
+  window.visualViewport?.addEventListener('scroll', syncWaitlistViewport, {passive:true});
 
   document.querySelectorAll('.waitlist-trigger').forEach(el => el.addEventListener('click', openWaitlist));
   document.getElementById('waitlistClose').addEventListener('click', closeWaitlist);
